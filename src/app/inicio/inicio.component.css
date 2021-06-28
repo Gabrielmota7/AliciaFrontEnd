@@ -1,0 +1,46 @@
+.img-fundo{
+  background-image: url("../../assets/img/Mulheres.jpeg");
+ /*  background-repeat: no-repeat; */
+  opacity: .70;
+  max-height: 100vh;
+  background-size: cover;
+
+}
+/*Imagens carrossel*/
+.img-carrossel{
+  opacity: .89;
+  max-height: 100vh;
+  background-size: cover;
+  position:relative; top:0px; left:0px;
+
+
+}
+
+.t-bg{
+  width: 100vw;
+  height: 100vw;
+}
+/*Logo da alicia*/
+.logo{
+  opacity: .99;
+  position:absolute; top:100px; left:10px;
+  /* margin-left: 30%; */
+  width: 20%;
+  margin-top: 50px;
+  /* background-image: url("../../assets/img/alicia3.png"); */
+  background-repeat: no-repeat;
+}
+/*Texto da segunda imágem*/
+.texto{
+  position:absolute; top:60%; left:5%;
+  color: white;
+  font-size: 7vh;
+  font-weight: bold
+}
+/*Texto da terceira imágem*/
+.texto1{
+  position:absolute; top:60%; left:5%;
+  color: white;
+  font-size: 7vh;
+  font-weight: bold
+}
