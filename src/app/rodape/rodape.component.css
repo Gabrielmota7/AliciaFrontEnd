@@ -1,0 +1,18 @@
+.loja-aplicativo{
+    list-style: none;
+    padding: 0;
+}
+
+.loja-aplicativo li{
+    display: inline;
+    margin: 0;
+    padding: 5px;
+}
+
+.background-rodape{
+    background-color: #A27FA8;
+}
+
+.background-copy{
+    background-color: #03989E;
+}
