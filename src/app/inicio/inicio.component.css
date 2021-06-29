@@ -34,13 +34,13 @@
 .texto{
   position:absolute; top:60%; left:5%;
   color: white;
-  font-size: 7vh;
+  font-size: 50px;
   font-weight: bold
 }
 /*Texto da terceira imágem*/
 .texto1{
   position:absolute; top:60%; left:5%;
   color: white;
-  font-size: 7vh;
+  font-size: 50px;
   font-weight: bold
 }
