@@ -10,7 +10,6 @@ import { RodapeComponent } from './rodape/rodape.component';
 
 
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
-import { EntrarComponent } from './entrar/entrar.component';
 import { ContatoComponent } from './contato/contato.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
@@ -25,7 +24,6 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
     AppComponent,
     MenuComponent,
     RodapeComponent,
-    EntrarComponent,
     ContatoComponent,
     InicioComponent,
     SobreNosComponent,
