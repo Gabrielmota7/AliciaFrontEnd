@@ -1,0 +1,27 @@
+.tela {
+    min-height: 100vh;
+}
+
+.roxobackground{
+    background-color: rgba(162,127,168, 0.25);
+}
+
+.mtop {
+    margin-top: 50vh;
+}
+
+h1 {
+    font-family: Roboto;
+    color: #03989E;
+    font-size: 48pt;
+}
+
+h5 {
+    font-family: Roboto;
+    color: #A27FA8;
+    font-size: 18pt;
+    text-align: center;
+}
+
+.btn-outline-verde{color:#03989E;border-color:#03989E; border-radius: 30px;}
+.btn-outline-verde:hover{color:#fff;background-color:#03989E;border-color:#03989E}
