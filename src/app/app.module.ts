@@ -12,6 +12,7 @@ import { ContatoComponent } from './contato/contato.component';
 import { InicioComponent } from './inicio/inicio.component';
 
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
+import { CadastrarComponent } from './cadastrar/cadastrar.component';
 
 
 
@@ -28,7 +29,8 @@ import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 
     InicioComponent,
 
-    SobreNosComponent
+    SobreNosComponent,
+      CadastrarComponent
 
 
 
