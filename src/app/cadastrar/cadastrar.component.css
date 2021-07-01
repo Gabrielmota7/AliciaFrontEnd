@@ -3,7 +3,7 @@
     background-image: url("https://i.imgur.com/LxftlfG.jpg");
   
     /* Control the height of the image */
-    min-height: 725px;
+    min-height: 100vh;
 
     /* opacity of the image*/
     opacity: 0.9; 
@@ -13,14 +13,13 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-  }
+}
 
- 
- #img-bg {
-     background-image: url("https://i.imgur.com/HS30Tfj.jpg");
-     min-height: 500px;
-     border: 0cm;
- }
+#img-bg {
+    background-image: url("https://i.imgur.com/HS30Tfj.jpg");
+    min-height: 500px;
+    border: 0cm;
+}
 
  .buttomColor{
      background-color: #A27FA8;

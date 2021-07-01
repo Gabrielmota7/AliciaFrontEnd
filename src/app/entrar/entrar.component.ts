@@ -24,6 +24,7 @@ export class EntrarComponent implements OnInit {
 
   ngOnInit(){
     window.scroll(0,0)
+    environment.interface = "0";
   }
 
   entrar() {
@@ -34,6 +35,8 @@ export class EntrarComponent implements OnInit {
       environment.token = this.usuarioLogin.token;
       environment.nome = this.usuarioLogin.nome;
       environment.foto = this.usuarioLogin.foto;
+
+      alert("Login com sucesso")
 
       /*Para testes:
         console.log(environment.id)
