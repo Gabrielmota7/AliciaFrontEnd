@@ -11,9 +11,7 @@ import { MenuComponent } from './menu/menu.component';
 import { RodapeComponent } from './rodape/rodape.component';
 
 import { ContatoComponent } from './contato/contato.component';
-
 import { InicioComponent } from './inicio/inicio.component';
-
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { EntrarComponent } from './entrar/entrar.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
@@ -23,21 +21,13 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
 @NgModule({
   declarations: [
     AppComponent,
-
     MenuComponent,
     RodapeComponent,
-
-
     ContatoComponent,
-
-
     InicioComponent,
-
     SobreNosComponent,
-      EntrarComponent,
-      CadastrarComponent
-
-
+    EntrarComponent,
+    CadastrarComponent
 
   ],
   imports: [
