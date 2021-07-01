@@ -1,0 +1,39 @@
+#bg-img {
+    /* The image used */
+    background-image: url("https://i.imgur.com/LxftlfG.jpg");
+  
+    /* Control the height of the image */
+    min-height: 725px;
+
+    /* opacity of the image*/
+    opacity: 0.9; 
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+ 
+ #img-bg {
+     background-image: url("https://i.imgur.com/HS30Tfj.jpg");
+     min-height: 500px;
+     border: 0cm;
+ }
+
+ .buttomColor{
+     background-color: #A27FA8;
+ }
+
+ .buttomCancelar{
+     background-color: #03989E;
+ }
+
+.btn-outline-primary{color:#03989E;border-color:#03989E}
+.btn-outline-primary:hover{color:#fff;background-color:#03989E;border-color:#03989E}
+
+.btn-outline-primary2{color:#A27FA8;border-color:#A27FA8}
+.btn-outline-primary2:hover{color:#fff;background-color:#A27FA8;border-color:#A27FA8}
+
+ 
