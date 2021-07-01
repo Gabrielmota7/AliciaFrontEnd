@@ -5,12 +5,14 @@ import { environment } from 'src/environments/environment.prod';
 import { UsuarioLogin } from '../model/UsuarioLogin';
 import { AuthService } from '../service/auth.service';
 
+
 @Component({
   selector: 'app-entrar',
   templateUrl: './entrar.component.html',
   styleUrls: ['./entrar.component.css']
 })
 export class EntrarComponent implements OnInit {
+
 
   usuarioLogin: UsuarioLogin = new UsuarioLogin()
 
@@ -46,6 +48,7 @@ export class EntrarComponent implements OnInit {
         alert("Usuário ou senha incorretos")
       }
     })
+
   }
 
 }
