@@ -1,0 +1,41 @@
+.botao-entrar{
+    background-color: #A27FA8;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.3rem;
+    font-weight: 200;
+    font-family: serif;
+    overflow: hidden;
+    width: 60%;
+    outline-width: 9px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    border: 3px;
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    vertical-align: middle;
+    z-index: 0;
+    transition-property: background-color,box-shadow,color,-webkit-box-shadow;
+    transition-duration: 167ms;
+    padding: .375rem .75rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+}
+
+
+.tela{
+    min-height: 100vh ;
+    background-color: rgba(162,127,168, 0.25);
+
+}
+
+.tela-login{
+    min-height: 70vh;
+    border-radius: #03989E;
+}
+
+.logo{
+    min-width: 300px;
+    min-height: 300px;
+}
