@@ -8,4 +8,12 @@
 
 .fonteTexto{
 font-family: Roboto;
+font-size: 15pt;
+
 }
+
+.justify{
+  text-align: justify;
+}
+
+
