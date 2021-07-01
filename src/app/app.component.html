@@ -1,11 +1,5 @@
-
-
-<app-menu></app-menu>
-
+<app-menu *ngIf ='auth.interface()'></app-menu>
 <router-outlet></router-outlet>
-<app-sobre-nos></app-sobre-nos>
-<app-contato></app-contato>
-<app-rodape></app-rodape>
-
-<app-entrar></app-entrar>
-<app-cadastrar></app-cadastrar>
+<app-sobre-nos *ngIf ='auth.interface()'></app-sobre-nos>
+<app-contato *ngIf ='auth.interface()'></app-contato>
+<app-rodape *ngIf ='auth.interface()'></app-rodape>

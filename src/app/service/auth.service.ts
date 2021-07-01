@@ -31,4 +31,16 @@ export class AuthService {
 
     return ok;
   }
+
+  interface() {
+    let ok: boolean = false;
+
+    if(environment.interface == '') {
+      ok = true;
+    } else {
+      ok = false;
+    }
+
+    return ok;
+  }
 }
