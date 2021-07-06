@@ -14,7 +14,10 @@ import { ContatoComponent } from './contato/contato.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
+import { PostagemComponent } from './postagem/postagem.component';
+import { TemaComponent } from './tema/tema.component';
 import { MenuLateralComponent } from './menu-lateral/menu-lateral.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -35,6 +38,8 @@ import { MatDividerModule } from '@angular/material/divider';
     InicioComponent,
     SobreNosComponent,
     CadastrarComponent,
+    PostagemComponent,
+    TemaComponent,
     MenuLateralComponent
 
 

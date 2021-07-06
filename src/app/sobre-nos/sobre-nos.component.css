@@ -1,10 +1,8 @@
-.juboColor{
+.jumboColor{
     background-color: rgb(55, 35, 75);
 }
 
-.juboColor2{
-    background-color: secondary;
-}
+
 
 .fonteTexto{
 font-family: Roboto;
@@ -15,5 +13,13 @@ font-size: 15pt;
 .justify{
   text-align: justify;
 }
+
+.icons{
+width: 100px;
+height: 100px;
+
+}
+
+
 
 
