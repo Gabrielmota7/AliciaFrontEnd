@@ -33,6 +33,17 @@
 
 .icoGitHub:hover {
   color: #A27FA8;
- 
 
+
+}
+/*Icones apps responsivos*/
+@media screen and (max-width: 375px){
+  .icoPlayStore{
+    width: 110px;
+    height: 40px;
+  }
+  .icoAppleStore{
+    width: 110px;
+    height: 40px;
+  }
 }
