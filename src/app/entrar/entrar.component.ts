@@ -45,7 +45,7 @@ export class EntrarComponent implements OnInit {
         console.log(environment.foto)
       */
 
-      //this.router.navigate(['/'])
+      this.router.navigate(['/postagem'])
     }, erro => {
       if (erro.status == 500) {
         alert("Usuário ou senha incorretos")
