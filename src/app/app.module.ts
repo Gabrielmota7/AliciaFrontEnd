@@ -14,10 +14,8 @@ import { ContatoComponent } from './contato/contato.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
+import { PostagemComponent } from './postagem/postagem.component';
 import { TemaComponent } from './tema/tema.component';
-
-
-
 
 @NgModule({
   declarations: [
@@ -29,6 +27,7 @@ import { TemaComponent } from './tema/tema.component';
     InicioComponent,
     SobreNosComponent,
     CadastrarComponent,
+    PostagemComponent,
     TemaComponent
 
 
