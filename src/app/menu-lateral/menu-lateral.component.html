@@ -1,0 +1,53 @@
+<mat-toolbar>
+
+    Responsive side navigation
+    <button mat-icon-button *ngIf = "sidenav.mode === 'over'" (click) = "sidenav.toggle()">
+        <i *ngIf="!sidenav.opened" class="fas fa-bars"></i>
+        <i *ngIf="sidenav.opened" class="fas fa-times"></i>
+    </button>
+</mat-toolbar>
+
+<mat-sidenav-container>
+    <mat-sidenav #sidenav='matSidenav'  class="mat-elevation-z8">
+        <img class="avatar mat-elevation-z8" src="../../assets/img/Rafaela.jpeg">
+
+        <h4 class="name">Rafaela</h4>
+        <p class="designation">Desenvolvedora Java Jr. Full Stack</p>
+
+        <button mat-button class="mt-4 menu-button d-flex justify-content-between align-items-center">
+            <i class="fas fa-home"></i>
+            <span> Página Inicial</span>
+        </button>
+
+        <button mat-button class="mt-5 menu-button d-flex justify-content-between align-items-center">
+            <i class="fas fa-hand-holding-heart"></i>
+            <span>Apoie Start-ups</span>
+        </button>
+
+        <button mat-button class="mt-5 menu-button d-flex justify-content-between align-items-center">
+            <i class="fas fa-clipboard-list"></i>
+            <span>  Temas</span>
+        </button>
+
+        <button mat-button class="mt-5 menu-button d-flex justify-content-between align-items-center">
+            <i class="fas fa-users"></i>
+            <span> Usuários</span>
+        </button>
+
+        <button mat-button class="mt-5 menu-button d-flex justify-content-between align-items-center">
+            <i class="fas fa-cog"></i>
+            <span> Configurações</span>
+        </button>
+
+        <button mat-button class="mt-5 menu-button d-flex justify-content-between align-items-center">
+            <i class="fas fa-sign-out-alt"></i>
+            <span> Sair</span>
+        </button>
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="content mat-elevation-z8">
+            Main content here!
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

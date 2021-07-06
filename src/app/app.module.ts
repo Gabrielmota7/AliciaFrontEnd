@@ -14,6 +14,13 @@ import { ContatoComponent } from './contato/contato.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
+import { MenuLateralComponent } from './menu-lateral/menu-lateral.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
 
 
 
@@ -27,7 +34,8 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
     ContatoComponent,
     InicioComponent,
     SobreNosComponent,
-    CadastrarComponent
+    CadastrarComponent,
+    MenuLateralComponent
 
 
   ],
@@ -35,7 +43,12 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [{
 
