@@ -26,13 +26,6 @@
 
 }
 
-.icoGitHub{
-  display: inline;
-  margin: 0;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
 .icoGitHub {
   color: #03989E;
   font-size: 35pt;
@@ -40,6 +33,6 @@
 
 .icoGitHub:hover {
   color: #A27FA8;
-  font-size: 32pt;
+ 
 
 }

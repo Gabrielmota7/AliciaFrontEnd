@@ -150,9 +150,9 @@ border: 7px solid #ffffff;
 
  .col span{
    width: 0;
-   border-top: 30px solid transparent;
-   border-bottom:30px solid transparent;
-   border-right:45px solid #f7f3f8;
+   border-top: 15px solid transparent;
+   border-bottom:15px solid transparent;
+   border-right:15px solid #f7f3f8;
    position: absolute;
    top: 50%;
    right: 0;
@@ -163,14 +163,17 @@ border: 7px solid #ffffff;
  .col .arrow{
   right: unset;
   left: 0;
-  border-left:30px solid #f7f3f8;
-  border-right:30px solid transparent;
+  border-left:15px solid #f7f3f8;
+  border-right:15px solid transparent;
 
+ }
+
+ a{
+   color:#000
  }
 
 
 /*Responsividade da equipe*/
-
 @media screen and (max-width: 770px){
   .row{
     width: 95%;
