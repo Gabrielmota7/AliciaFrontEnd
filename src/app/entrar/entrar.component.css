@@ -5,7 +5,7 @@
     vertical-align: middle;
     font-size: 1.3rem;
     font-weight: 200;
-    font-family: serif;
+    font-family: Arial, Helvetica, sans-serif;
     overflow: hidden;
     width: 60%;
     outline-width: 9px;
@@ -39,3 +39,11 @@
     min-width: 300px;
     min-height: 300px;
 }
+
+
+.pl-3{
+  padding-right: 5px;
+}
+
+  
+
