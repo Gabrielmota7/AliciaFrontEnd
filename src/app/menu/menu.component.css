@@ -55,3 +55,10 @@
   padding-left: 10px;
   padding-right: 10px;
 }
+
+
+/*Hover dos botões do menu*/
+#textoo:hover{
+  transition: 0.2s;
+  color: #A27FA8
+}

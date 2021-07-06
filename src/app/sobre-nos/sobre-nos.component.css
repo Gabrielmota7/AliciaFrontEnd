@@ -1,8 +1,8 @@
-.juboColor{
+.jumboColor{
     background-color: rgb(55, 35, 75);
 }
 
-.juboColor2{
+.jumboColor2{
     background-color: secondary;
 }
 
@@ -16,4 +16,8 @@ font-size: 15pt;
   text-align: justify;
 }
 
+.icons{
+width: 100px;
+height: 100px;
 
+}
