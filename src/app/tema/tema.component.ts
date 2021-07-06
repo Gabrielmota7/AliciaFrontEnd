@@ -1,3 +1,4 @@
+import { HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
@@ -22,6 +23,10 @@ export class TemaComponent implements OnInit {
   ngOnInit() {
     if(environment.token == ''){
       this.router.navigate(['/entrar'])
+    } else {
+      this.temaService.token = {
+        headers: new HttpHeaders().set('Authorization',environment.token)
+      }
     }
     this.findAllTemas()
   }

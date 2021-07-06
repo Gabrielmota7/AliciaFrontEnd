@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <div class="row bg-info d-flex align-items-center">
-      
+
         <div class="row d-flex justify-content-center">
             <div class="col-md-6">
                 <div class="col-md-6">
@@ -10,8 +10,8 @@
             </div>
             <div class="col-md-6 d-flex justify-content-center">
                 <img src="assets/img/Blog-postagem.png" alt="" width="500px" height="500px">
-          
-              </div>
+
+            </div>
 
         </div>
     </div>
@@ -20,33 +20,32 @@
     <div class="row d-flex justify-content-center">
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Midia</label>
-            <input [(ngModel)]='postagem.midia' type="text" class="form-control" id="midia" placeholder="Adicione midia">
-          </div>
-          <div class="mb-3">
+            <input [(ngModel)]='postagem.midia' type="text" class="form-control" id="midia"
+                placeholder="Adicione midia">
+        </div>
+        <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Adicione texto a postagem </label>
             <textarea [(ngModel)]='postagem.texto' class="form-control" id="texto" rows="3"></textarea>
-          </div>
-          <div>
+        </div>
+        <div>
             <a data-dismiss="modal" routerLink='/tema'>Ir para Temas</a>
             <select class="form-select" aria-label="Default select example">
-                <option selected>Temas</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
-          </div>
-          <div class="mb-5 mt-5">
-              <button type="submit" class="btn btn-success" (click)='postar()'>Postar</button>
-          </div>
+                <option value = '' class = "text-secondary">Selecione um tema</option>
+                <option [(ngModel)] = 'postagem.tema' *ngFor='let tema of listaTemas' value="{{tema.id}}">{{tema.descricao}}</option>
+            </select>
+        </div>
+        <div class="mb-5 mt-5">
+            <button type="submit" class="btn btn-success" (click)='postar()'>Postar</button>
+        </div>
 
     </div>
 </div>
 <div class="container mb-3 mt-3">
-<div class="row mt-5">
-    <div class="col-md-12">
-        <h2 class="text-center">Todas as Postagens</h2>
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <h2 class="text-center">Todas as Postagens</h2>
+        </div>
     </div>
-</div>
 
 
 
