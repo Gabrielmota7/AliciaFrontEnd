@@ -10,6 +10,7 @@
   position: fixed;
   width: 100vw;
   z-index: 9999;
+  border-bottom: 1px solid #03989E;
 }
 
 .btn1{
@@ -49,4 +50,15 @@
 }
 .pHome{
   padding-left: 20px;
+}
+.pBotaoHome{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+/*Hover dos botões do menu*/
+#textoo:hover{
+  transition: 0.2s;
+  color: #A27FA8
 }
