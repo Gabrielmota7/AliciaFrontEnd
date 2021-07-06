@@ -1,13 +1,13 @@
 #bg-img {
     /* The image used */
     background-image: url("https://i.imgur.com/LxftlfG.jpg");
-  
+
     /* Control the height of the image */
     min-height: 100vh;
 
     /* opacity of the image*/
-    opacity: 0.9; 
-  
+    opacity: 0.9;
+
     /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
@@ -35,4 +35,7 @@
 .btn-outline-primary2{color:#A27FA8;border-color:#A27FA8}
 .btn-outline-primary2:hover{color:#fff;background-color:#A27FA8;border-color:#A27FA8}
 
- 
+.mr-5{
+
+  margin-right: 10;
+}
