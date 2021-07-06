@@ -10,9 +10,36 @@
 }
 
 .background-rodape{
-    background-color: #A27FA8;
+    background-color: #03989E;
 }
 
 .background-copy{
     background-color: black;
+}
+
+
+/*Icone do github*/
+.icoGitHub{
+  list-style:none;
+  padding: 0 0 0 0px;
+  margin: 0 0 0 0px;
+
+}
+
+.icoGitHub{
+  display: inline;
+  margin: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.icoGitHub {
+  color: #03989E;
+  font-size: 35pt;
+}
+
+.icoGitHub:hover {
+  color: #A27FA8;
+  font-size: 32pt;
+
 }

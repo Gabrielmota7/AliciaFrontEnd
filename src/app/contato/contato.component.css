@@ -94,7 +94,7 @@ border: 7px solid #ffffff;
  }
 
  .row{
-   background: #A27FA8;
+   background: #f7f3f8;
    width: 80%;
    margin: 4% auto;
    display: flex;
@@ -152,7 +152,7 @@ border: 7px solid #ffffff;
    width: 0;
    border-top: 30px solid transparent;
    border-bottom:30px solid transparent;
-   border-right:45px solid #009688;
+   border-right:45px solid #f7f3f8;
    position: absolute;
    top: 50%;
    right: 0;
@@ -163,63 +163,122 @@ border: 7px solid #ffffff;
  .col .arrow{
   right: unset;
   left: 0;
-  border-left:30px solid #009688;
+  border-left:30px solid #f7f3f8;
   border-right:30px solid transparent;
 
  }
 
- @media screen and (max-width: 770px){
-   .row{
-     width: 95%;
 
-   }
+/*Responsividade da equipe*/
 
-   .col{
-     flex-basis: 50%;
-     font-size: 14px;
-   }
-   .social-link .fa{
-    width: 25px;
-    height: 25px;
-    line-height: 25px;
-
+@media screen and (max-width: 770px){
+  .row{
+    width: 95%;
 
   }
 
-  .margem{
-    margin-top:-18px;
+  .col{
+    flex-basis: 50%;
+    font-size: 14px;
   }
+  .social-link .fa{
+   width: 25px;
+   height: 25px;
+   line-height: 25px;
 
-  .row .col:nth-child(1){
-    order:1
 
-  }
-  .row .col:nth-child(2){
-    order:2
-
-  }
-   .row .col:nth-child(3){
-    order:3
-
-  }
-  .row .col:nth-child(4){
-    order:4
-
-  }
-  .row .col:nth-child(5){
-    order:5
-
-  }
-  .row .col:nth-child(6){
-    order:6
-
-  }
-  .row .col:nth-child(7){
-    order:7
-
-  }
-  .row .col:nth-child(8){
-    order:8
-
-  }
  }
+
+ .margem{
+   margin-top:-31px;
+ }
+
+ .row .col:nth-child(1){
+   order:1
+
+ }
+ .row .col:nth-child(2){
+   order:2
+
+ }
+  .row .col:nth-child(3){
+   order:3
+
+ }
+ .row .col:nth-child(4){
+   order:4
+
+ }
+ .row .col:nth-child(5){
+   order:5
+
+ }
+ .row .col:nth-child(6){
+   order:6
+
+ }
+ .row .col:nth-child(7){
+   order:7
+
+ }
+ .row .col:nth-child(8){
+   order:8
+
+ }
+}
+@media screen and (max-width: 375px){
+ .row{
+   width: 95%;
+
+ }
+
+ .col{
+   flex-basis: 50%;
+   font-size: 14px;
+ }
+ .social-link .fa{
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+
+
+}
+
+.margem{
+  margin-top:-14px;
+}
+
+.row .col:nth-child(1){
+  order:1
+
+}
+.row .col:nth-child(2){
+  order:2
+
+}
+ .row .col:nth-child(3){
+  order:3
+
+}
+.row .col:nth-child(4){
+  order:4
+
+}
+.row .col:nth-child(5){
+  order:5
+
+}
+.row .col:nth-child(6){
+  order:6
+
+}
+.row .col:nth-child(7){
+  order:7
+
+}
+.row .col:nth-child(8){
+  order:8
+
+}
+}
+
