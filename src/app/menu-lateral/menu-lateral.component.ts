@@ -9,20 +9,22 @@ import { BreakpointObserver } from '@angular/cdk/layout';
 })
 export class MenuLateralComponent implements OnInit {
 
-  @ViewChild(MatSidenav)
-  sidenav!: MatSidenav;
 
-
-  nome = environment.nome
+  nome:string
+  
   foto = environment.foto
 
-  constructor(private observer: BreakpointObserver) { }
+  /*constructor private observer BreakpointObserver */
 
-  ngOnInit(): void {
+  constructor() { }
+
+  ngOnInit(){
+    console.log(environment)
+    this.nome = environment.nome
   }
 
-  ngAfterViewInit() {
-    this.observer.observe(['(max-width: 800px)']).subscribe((resp) => {
+  /* ngAfterViewInit() {
+    this.observer.observe(['(max-width: 950px)']).subscribe((resp) => {
       if (resp.matches) {
         this.sidenav.mode = 'over';
         this.sidenav.close();
@@ -31,7 +33,7 @@ export class MenuLateralComponent implements OnInit {
         this.sidenav.open();
       }
     });
-  }
+  }*/
   /*sidebarCollapse = false barraLateral() {
     this.sidebarCollapse = !this.sidebarCollapse
   } */

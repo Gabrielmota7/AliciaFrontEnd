@@ -1,13 +1,22 @@
-mat-toolbar {
-    background: #004a9f;
-    color: white;
+.sticky {
+    position: relative;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 64px;
 }
 
-mat-sidenav {
+mat-toolbar {
+    background-color: none;
+    color: #A27FA8;
+    position: fixed;
+}
+
+.mat-sidenav {
     margin: 16px;
-    width: 250px;
-    height: calc(100vh - 98px);
-    border-right: none;
+    
+    min-height: calc(100vh - 98px);
+    border-style: solid;
+    border-right: solid;
     background: #ffffff;
     color: #A27FA8;
     border-radius: 10px;
@@ -15,24 +24,20 @@ mat-sidenav {
     text-align: center;
 }
 
-
-
-mat-sidenav-container {
-    min-height: calc(100vh - 98px);
-}
-
 span {
     font-weight: bold;
-    font-size: 15pt
+    font-size: 14pt
 }
 
 i {
     margin-right: 10px;
-    font-size: 21pt;
+    font-size: 20pt;
 }
 
 button {
-  border-radius: 30px;  
+  border-radius: 30px;
+  min-width: 190px;
+  min-height: 45px;  
 }
 
 button:hover {
@@ -59,7 +64,7 @@ button:hover {
     align-items: center;
 
     font-size: 2rem;
-    color: lightgray;
+    color: #ffffff;
 }
 
 mat-icon {

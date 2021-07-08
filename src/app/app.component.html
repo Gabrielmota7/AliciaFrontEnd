@@ -1,7 +1,22 @@
-<!-- <app-menu *ngIf ='auth.interface()'></app-menu>
-<router-outlet></router-outlet>
-<app-sobre-nos *ngIf ='auth.interface()'></app-sobre-nos>
-<app-contato *ngIf ='auth.interface()'></app-contato>
-<app-rodape *ngIf ='auth.interface()'></app-rodape>  -->
+<app-menu *ngIf ='auth.interface()'></app-menu>
 
-<app-menu-lateral></app-menu-lateral>
+<div *ngIf ='auth.logado()' class = "container-fluid">
+    <div class="row">
+        <div class="col-md-4 d-flex justify-content-center">
+            <div class="mt-4"><app-menu-lateral></app-menu-lateral></div>
+            
+        </div>
+        <div class="col-md-7 bordas">
+            <router-outlet *ngIf = "auth.logado()"></router-outlet>
+        </div>
+        <div class="col-md-1">
+            
+        </div>
+    </div>
+</div>
+<div *ngIf = "!auth.logado()">
+    <router-outlet></router-outlet>
+    <app-sobre-nos *ngIf ='auth.interface()'></app-sobre-nos>
+    <app-contato *ngIf ='auth.interface()'></app-contato>
+    <app-rodape *ngIf ='auth.interface()'></app-rodape>
+</div>

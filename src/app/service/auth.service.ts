@@ -10,6 +10,8 @@ import { UsuarioLogin } from '../model/UsuarioLogin';
 })
 export class AuthService {
 
+  ok: boolean = false;
+  okLogado: boolean = false;
   constructor(
     private http:HttpClient
   ) { }
@@ -23,24 +25,22 @@ export class AuthService {
   }
 
   logado() {
-    let ok: boolean = false;
 
     if(environment.token != '') {
-      ok = true;
+      this.okLogado = true;
     }
 
-    return ok;
+    return this.okLogado;
   }
 
   interface() {
-    let ok: boolean = false;
 
     if(environment.interface == '') {
-      ok = true;
+      this.ok = true;
     } else {
-      ok = false;
+      this.ok = false;
     }
 
-    return ok;
+    return this.ok
   }
 }
