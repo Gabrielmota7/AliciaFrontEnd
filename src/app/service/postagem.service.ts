@@ -19,8 +19,20 @@ export class PostagemService {
     return this.http.get<Postagem[]>('https://projetoalicia.herokuapp.com/postagens', this.token)
   }
 
+  getByIdPostagem(id:number): Observable<Postagem>{
+    return this.http.get<Postagem>(`https://projetoalicia.herokuapp.com/postagens/${id}`, this.token)
+  }
+
   postPostagem(postagem: Postagem): Observable<Postagem>{
     return this.http.post<Postagem>('https://projetoalicia.herokuapp.com/postagens/postar', postagem, this.token)
+  }
+
+  putPostagem(postagem: Postagem): Observable<Postagem>{
+    return this.http.put<Postagem>('https://projetoalicia.herokuapp.com/postagens/alterar', postagem, this.token)
+  }
+
+  deletePostagem(id: number){
+    return this.http.delete<Postagem>(`https://projetoalicia.herokuapp.com/postagens/${id}`, this.token)
   }
 
 }
