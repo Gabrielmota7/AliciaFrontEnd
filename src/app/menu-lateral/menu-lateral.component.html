@@ -10,7 +10,17 @@
         <i *ngIf="sidenav.opened" class="fas fa-times"></i>
     </button>
  </div> -->
-<div class = "sticky mat-sidenav">
+
+<div class="row mb-4">
+    <div class="col-md-12 d-flex justify-content-center">
+        <div class="hamburger" id = "icone" (click) = "mobileMenu()">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </div>
+</div>
+<nav class = "sticky mat-sidenav nav-menu" id = "navegacao">
 
     <img class="avatar mat-elevation-z8" src="../../assets/img/rafaela222.jpg">
 
@@ -64,10 +74,10 @@
 
     <div class="row d-flex justify-content-center">
         <div class="col-md-12 d-flex justify-content-center">
-            <button mat-button class="mt-5 menu-button text-center d-flex justify-content-center align-items-center">
+            <button mat-button class="mt-5 menu-button text-center d-flex justify-content-center align-items-center" (click) = "sair()">
                 <i class="fas fa-sign-out-alt"></i>
                 <span> Sair</span>
             </button>
         </div>
     </div>
-</div>
+</nav>

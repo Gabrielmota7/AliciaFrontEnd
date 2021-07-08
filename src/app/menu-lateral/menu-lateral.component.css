@@ -89,3 +89,66 @@ mat-icon {
     font-size: 0.8rem;
     color: #A27FA8;
 }
+
+
+/* Menu Hamburguer */
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #A27FA8;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        
+        position: fixed;
+        left: -200%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 85vw;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+        border-right: solid;
+        border-left: solid;
+        border-color: #A27FA8;
+        min-height: 85vh;
+    }
+
+    .nav-menu.active {
+        position: relative;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 64px;
+        left: 0;
+        min-height: 90vh;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
