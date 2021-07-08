@@ -16,6 +16,8 @@ import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { PostagemComponent } from './postagem/postagem.component';
 import { TemaComponent } from './tema/tema.component';
+import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
+import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { TemaComponent } from './tema/tema.component';
     SobreNosComponent,
     CadastrarComponent,
     PostagemComponent,
-    TemaComponent
+    TemaComponent,
+    TemaEditComponent,
+    TemaDeleteComponent
 
 
   ],
