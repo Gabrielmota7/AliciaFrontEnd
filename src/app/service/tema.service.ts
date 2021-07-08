@@ -24,4 +24,9 @@ export class TemaService {
     return this.http.post<Tema>('https://projetoalicia.herokuapp.com/tema/criar', tema, this.token)
 
   }
+  //Método criado pelo Gabriel
+  getByIdTema(id: number): Observable<Tema>{
+    return this.http.get<Tema>(`https://projetoalicia.herokuapp.com/tema/${id}`, this.token)
+  }
+
 }

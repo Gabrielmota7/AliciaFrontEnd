@@ -29,7 +29,7 @@
         </div>
         <div>
             <a data-dismiss="modal" routerLink='/tema'>Ir para Temas</a>
-            <select class="form-select" aria-label="Default select example">
+            <select [(ngModel)]="idTema" class="form-select" aria-label="Default select example" (change)="findByIdTema()">
                 <option value = '' class = "text-secondary">Selecione um tema</option>
                 <option [(ngModel)] = 'postagem.tema' *ngFor='let tema of listaTemas' value="{{tema.id}}">{{tema.descricao}}</option>
             </select>
@@ -66,7 +66,10 @@
                     <tr *ngFor='let postagem of listaPostagem'>
                         <th>{{postagem.id}}</th>
                         <td>{{postagem.texto}}</td>
+                        <td><button class="btn btn-info m-3" [routerLink]="['/postagem-edit', postagem.id]">Editar</button>
+                            <button class="btn btn-danger" [routerLink]="['/postagem-delete', postagem.id]">Apagar</button>
 
+                        </td>
 
                     </tr>
 
