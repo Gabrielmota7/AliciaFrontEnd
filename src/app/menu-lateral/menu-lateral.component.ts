@@ -11,7 +11,8 @@ import { Router } from '@angular/router';
 export class MenuLateralComponent implements OnInit {
 
 
-  nome:string
+  nome = environment.nome
+  id = environment.id
   
   foto = environment.foto
   hamburger: Element | null
@@ -24,7 +25,8 @@ export class MenuLateralComponent implements OnInit {
 
   ngOnInit(){
     console.log(environment)
-    this.nome = environment.nome
+    //this.nome = environment.nome
+    //this.id = environment.id
   }
 
   /* ngAfterViewInit() {
