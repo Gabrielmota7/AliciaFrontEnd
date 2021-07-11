@@ -24,6 +24,9 @@ export class EntrarComponent implements OnInit {
 
   ngOnInit(){
     window.scroll(0,0)
+    if(environment.interface == '') {
+      environment.interface = "a";
+    }
   }
 
   entrar() {

@@ -13,8 +13,7 @@ export class AuthService {
     headers: new HttpHeaders().set('Authorization',environment.token)
   }
 
-  ok: boolean = false;
-  okLogado: boolean = false;
+  
   constructor(
     private http:HttpClient
   ) { }
@@ -32,12 +31,15 @@ export class AuthService {
   }
 
   logado() {
+    let ok: boolean = false;
 
     if(environment.token != '') {
-      this.okLogado = true;
+      ok = true;
+    } else {
+      ok = false;
     }
 
-    return this.okLogado;
+    return ok;
   }
 
   interface() {
@@ -49,7 +51,7 @@ export class AuthService {
       ok = true;
     }
 
-    return this.ok
+    return ok;
   }
 
 }

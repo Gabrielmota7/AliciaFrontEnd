@@ -43,13 +43,12 @@ export class MenuLateralComponent implements OnInit {
   } */
 
   sair() {
+    this.router.navigate(['/entrar'])
     environment.token = ''
     environment.nome =  ''
     environment.id = 0
     environment.foto = ''
-    environment.interface = ''
 
-    this.router.navigate(['/entrar'])
   }
 
   mobileMenu() {
