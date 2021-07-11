@@ -26,6 +26,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 
 
+import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
+import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
+import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
+import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
 
 
 @NgModule({
@@ -40,7 +44,12 @@ import { MatDividerModule } from '@angular/material/divider';
     CadastrarComponent,
     PostagemComponent,
     TemaComponent,
-    MenuLateralComponent
+    MenuLateralComponent,
+    PostagemEditComponent,
+    PostagemDeleteComponent,
+    TemaEditComponent,
+    TemaDeleteComponent
+
 
 
   ],

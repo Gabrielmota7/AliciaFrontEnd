@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
@@ -9,6 +9,9 @@ import { UsuarioLogin } from '../model/UsuarioLogin';
   providedIn: 'root'
 })
 export class AuthService {
+  token = {
+    headers: new HttpHeaders().set('Authorization',environment.token)
+  }
 
   ok: boolean = false;
   okLogado: boolean = false;
@@ -24,6 +27,10 @@ export class AuthService {
     return this.http.post<Usuario>("https://projetoalicia.herokuapp.com/usuario/cadastro",usuario)
   }
 
+  getByIdUsuario(id: number): Observable<Usuario> {
+    return this.http.get<Usuario>(`https://projetoalicia.herokuapp.com/usuario/${id}`, this.token)
+  }
+
   logado() {
 
     if(environment.token != '') {
@@ -34,13 +41,15 @@ export class AuthService {
   }
 
   interface() {
+    let ok: boolean = true;
 
-    if(environment.interface == '') {
-      this.ok = true;
+    if(environment.interface != '') {
+      ok = false;
     } else {
-      this.ok = false;
+      ok = true;
     }
 
     return this.ok
   }
+
 }
