@@ -1,41 +1,110 @@
-#bg-img {
-    /* The image used */
-    background-image: url("https://i.imgur.com/LxftlfG.jpg");
+/* #bg-img { */
+  /* The image used */
+  /*  background-image: url("https://i.imgur.com/LxftlfG.jpg"); */
 
-    /* Control the height of the image */
-    min-height: 100vh;
+  /* Control the height of the image */
 
-    /* opacity of the image*/
-    opacity: 0.9;
+  /* opacity of the image*/
 
-    /* Center and scale the image nicely */
-    background-position: center;
+
+  /* Center and scale the image nicely */
+  /*   background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
+    position: relative; */
+  .bg-img {
+  min-height: 100vh;
+  background-image: url("../../assets/img/cadastro5.png");
+  max-height: 100vh;
+  background-size: cover;
+  position: absolute;
+  /* background-color: rgba(162,127,168, 0.25); */
 }
-
+/*
 #img-bg {
     background-image: url("https://i.imgur.com/HS30Tfj.jpg");
     min-height: 500px;
     border: 0cm;
+} */
+
+.buttomColor {
+  background-color: #a27fa8;
 }
 
- .buttomColor{
-     background-color: #A27FA8;
- }
+.buttomCancelar {
+  background-color: #03989e;
+}
 
- .buttomCancelar{
-     background-color: #03989E;
- }
+.btn-outline-primary {
+  color: #03989e;
+  border-color: #03989e;
+  margin-left: 20px;
+}
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: #03989e;
+  border-color: #03989e;
+}
 
-.btn-outline-primary{color:#03989E;border-color:#03989E}
-.btn-outline-primary:hover{color:#fff;background-color:#03989E;border-color:#03989E}
+.btn-outline-primary2 {
+  color: #a27fa8;
+  border-color: #a27fa8;
+  margin-right: 20px;
+}
+.btn-outline-primary2:hover {
+  color: #fff;
+  background-color: #a27fa8;
+  border-color: #a27fa8;
+}
 
-.btn-outline-primary2{color:#A27FA8;border-color:#A27FA8}
-.btn-outline-primary2:hover{color:#fff;background-color:#A27FA8;border-color:#A27FA8}
-
-.mr-5{
-
+.mr-5 {
   margin-right: 10;
+}
+.tamanho {
+  height: 200px;
+}
+
+.wid {
+  width: 255px;
+  height: 36px;
+}
+
+.ml-10 {
+  margin-left: 15px;
+}
+
+.wid2 {
+  width: 270px;
+  height: 36px;
+}
+
+.pl-nome {
+  padding-left: 22px;
+}
+
+.ml-5 {
+  margin-left: 2px;
+}
+
+.cor-borda{
+  border-radius: #03989E;
+}
+
+
+.wid3 {
+  width: 400px;
+  height: 36px;
+}
+.largura{
+  width: 40%;
+}
+
+.form-cadastro {
+  margin: auto;
+  width: 45%;
+  padding: 10px;
+  border: 1px solid #fff;
+  margin-top: 100px;
+  height: 80vh;
+  background-color: #fff;
 }
