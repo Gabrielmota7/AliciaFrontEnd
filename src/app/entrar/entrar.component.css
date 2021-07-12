@@ -26,12 +26,11 @@
 
 .tela{
     min-height: 100vh ;
-    background-color: rgba(162,127,168, 0.25);
+    background-color: rgba(162,127,168, 0.5);
 
 }
 
 .tela-login{
-    min-height: 70vh;
     border-radius: #03989E;
 }
 
@@ -59,4 +58,6 @@
   margin-right: 5px;
 }
 
-
+.mt-50 {
+  margin-top: 20vh;
+}

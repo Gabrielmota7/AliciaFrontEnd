@@ -1,7 +1,6 @@
-
-<div class="container-fluid tela">
-    <div class="row d-flex justify-content-center">
-        <div class="col-md-6 mt-5">
+<div class="container-fluid">
+    <div class="row d-flex justify-content-center tela align-items-center">
+        <div class="col-md-6">
 
             <div class="row d-flex justify-content-center">
                 <div class="col-md-10 d-flex justify-content-center">
@@ -9,55 +8,47 @@
                     <div class="col-md-9 card mt-1 border-5 tela-login cor-borda">
 
 
+                        <div class="row align-items-center">
                             <div class="col-md-12 d-flex justify-content-end">
-                          <a routerLink='/inicio' class="text-black pl-3" (click) = "sair()">
-                            <i class="fa fa-times mt-2 mr-2" aria-hidden="true"></i>
-                          </a>
-                        </div>
+                                <a routerLink='/inicio' class="text-black pl-3" (click) = "sair()">
+                                    <i class="fa fa-times mt-2 mr-2" aria-hidden="true"></i>
+                                </a>
+                            </div>
 
 
                             <div class="mt-4 d-flex justify-content-center ">
-                                <img src="../../assets/img/alícia.png" alt="Logo Alicia"  height="70px" width="200px">
+                                <img src="../../assets/img/alícia.png" alt="Logo Alicia" height="70px" width="200px">
                             </div>
-
-                      </div>
-
-                            <div class="form-group mb-2 m-3">
-                                <label for="usuario">Usuário</label>
-                                <input [(ngModel)] = 'usuarioLogin.login' class="form-control" type="text" name="usuario" id="usuario"
-                                    placeholder="Digite seu usuário">
-                            </div>
-
-                            <div class="form-group mb-2 m-3">
-                                <label for="senha">Senha</label>
-                                <input [(ngModel)] = 'usuarioLogin.senha' class="form-control" type="password" name="senha" id="senha"
-                                    placeholder="Digite sua senha">
-                                 
-                            </div>
-
-                            <div class="d-flex justify-content-center">
-                                <button type="submit" class="btn botao-entrar mt-7 m-lg-1 mb-md-2 text-light" aria-label="Entrar" height= "60px"
-                                line-height= "60px" (click) = "entrar()">Entrar</button>
-                            </div>
-
-                            <hr class="mt-2 mb-4">
-
-                            <p class="text-center mt-3">
-                                Não tem uma conta? <a routerLink ="/cadastrar">Cadastre-se</a>
-                            </p>
 
                         </div>
 
+                        <div class="form-group mb-2 m-3">
+                            <label for="usuario">Usuário</label>
+                            <input [(ngModel)]='usuarioLogin.login' class="form-control" type="text" name="usuario"
+                                id="usuario" placeholder="Digite seu usuário">
+                        </div>
+
+                        <div class="form-group mb-2 m-3">
+                            <label for="senha">Senha</label>
+                            <input [(ngModel)]='usuarioLogin.senha' class="form-control" type="password" name="senha"
+                                id="senha" placeholder="Digite sua senha">
+
+                        </div>
+
+                        <div class="d-flex justify-content-center mt-3">
+                            <button type="submit" class="btn botao-entrar mt-7 m-lg-1 mb-md-2 text-light"
+                                aria-label="Entrar" height="60px" line-height="60px" (click)="entrar()">Entrar</button>
+                        </div>
+
+                        <p class="text-center my-4">
+                            Não tem uma conta? <a routerLink="/cadastrar">Cadastre-se</a>
+                        </p>
+
                     </div>
+
                 </div>
             </div>
-
         </div>
+
     </div>
-
-
-
-
-
-
-
+</div>
