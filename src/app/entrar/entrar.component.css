@@ -1,5 +1,5 @@
 .botao-entrar{
-    background-color: #A27FA8;
+    background-color: #03989E;
     cursor: pointer;
     display: inline-block;
     vertical-align: middle;
@@ -45,5 +45,18 @@
   padding-right: 5px;
 }
 
-  
+.fa{
+  font-size: 25px;
+  color:black
+
+}
+
+.fa:hover{
+  color: grey;
+}
+
+.mr-2{
+  margin-right: 5px;
+}
+
 
