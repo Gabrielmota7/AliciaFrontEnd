@@ -11,18 +11,25 @@ import { InicioComponent } from './inicio/inicio.component';
 import { PostagemComponent } from './postagem/postagem.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { TemaComponent } from './tema/tema.component';
+import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
+
 
 const routes: Routes = [
   {path: "", redirectTo:"inicio", pathMatch: "full"},
+  //Rotas da página de inicio
   {path: "inicio", component: InicioComponent},
   {path: "sobre-nos", component: SobreNosComponent},
   {path: "contato", component: ContatoComponent},
+  //Rotas de usuario
   {path: "entrar", component: EntrarComponent},
   {path: "cadastrar", component: CadastrarComponent},
+  {path: 'usuario-edit/:id', component: UsuarioEditComponent},
+  //Rotas de postagem
   {path: "postagem", component: PostagemComponent},
-  {path: "tema", component: TemaComponent},
   {path: "postagem-edit/:id", component: PostagemEditComponent},
   {path: "postagem-delete/:id", component: PostagemDeleteComponent},
+  //Rotas de tema
+  {path: "tema", component: TemaComponent},
   {path: "tema-edit/:id", component: TemaEditComponent},
   {path: "tema-delete/:id", component: TemaDeleteComponent}
 

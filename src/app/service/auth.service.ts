@@ -13,6 +13,7 @@ export class AuthService {
     headers: new HttpHeaders().set('Authorization',environment.token)
   }
 
+  
   constructor(
     private http:HttpClient
   ) { }
@@ -25,6 +26,10 @@ export class AuthService {
     return this.http.post<Usuario>("https://projetoalicia.herokuapp.com/usuario/cadastro",usuario)
   }
 
+  atualizar(usuario: Usuario):Observable<Usuario> {
+    return this.http.put<Usuario>("https://projetoalicia.herokuapp.com/usuario/alterar", usuario, this.token)
+  }
+
   getByIdUsuario(id: number): Observable<Usuario> {
     return this.http.get<Usuario>(`https://projetoalicia.herokuapp.com/usuario/${id}`, this.token)
   }
@@ -34,20 +39,23 @@ export class AuthService {
 
     if(environment.token != '') {
       ok = true;
-    }
-
-    return ok;
-  }
-
-  interface() {
-    let ok: boolean = false;
-
-    if(environment.interface == '') {
-      ok = true;
     } else {
       ok = false;
     }
 
     return ok;
   }
+
+  interface() {
+    let ok: boolean = true;
+
+    if(environment.interface != '') {
+      ok = false;
+    } else {
+      ok = true;
+    }
+
+    return ok;
+  }
+
 }

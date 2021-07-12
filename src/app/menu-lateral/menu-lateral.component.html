@@ -1,0 +1,83 @@
+<!-- <mat-toolbar>
+    <button mat-icon-button *ngIf = "sidenav.mode === 'over'" (click) = "sidenav.toggle()">
+        <i *ngIf="!sidenav.opened" class="fas fa-bars"></i>
+        <i *ngIf="sidenav.opened" class="fas fa-times"></i>
+    </button>
+</mat-toolbar> -->
+<!--<div class="row d-flex justify-content-start mt-4">
+    <button mat-icon-button *ngIf = "sidenav.mode === 'over'" (click) = "sidenav.toggle()">
+        <i *ngIf="!sidenav.opened" class="fas fa-bars"></i>
+        <i *ngIf="sidenav.opened" class="fas fa-times"></i>
+    </button>
+ </div> -->
+
+<div class="row mb-4">
+    <div class="col-md-12 d-flex justify-content-center">
+        <div class="hamburger" id = "icone" (click) = "mobileMenu()">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </div>
+</div>
+<nav class = "sticky mat-sidenav nav-menu" id = "navegacao">
+
+    <img class="avatar mat-elevation-z8" src="../../assets/img/rafaela222.jpg">
+
+    <h4 class="name">{{nome}}</h4>
+    <p class="designation">Desenvolvedora Java Jr. Full Stack</p>
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-12 d-flex justify-content-center">
+            <button mat-button class="mt-4 menu-button text-center d-flex justify-content-center" routerLink = "/postagem">
+                <i class="fas fa-home"></i>
+                <span> Página Inicial</span>
+            </button>
+        </div>
+
+    </div>
+
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-12 d-flex justify-content-center">
+            <button mat-button class="mt-5 menu-button text-center d-flex justify-content-center align-items-center">
+                <i class="fas fa-hand-holding-heart"></i>
+                <span>Apoie Startups</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-12 d-flex justify-content-center">
+            <button mat-button class="mt-5 menu-button text-center d-flex justify-content-center align-items-center" routerLink = "/tema">
+                <i class="fas fa-clipboard-list"></i>
+                <span> Temas</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-12 d-flex justify-content-center">
+            <button mat-button class="mt-5 menu-button text-center d-flex justify-content-center align-items-center">
+                <i class="fas fa-users"></i>
+                <span> Usuários</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-12 d-flex justify-content-center">
+            <button mat-button class="mt-5 menu-button text-center d-flex justify-content-center align-items-center" [routerLink] = "['/usuario-edit',id]">
+                <i class="fas fa-cog"></i>
+                <span> Configurações</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-12 d-flex justify-content-center">
+            <button mat-button class="mt-5 menu-button text-center d-flex justify-content-center align-items-center" (click) = "sair()">
+                <i class="fas fa-sign-out-alt"></i>
+                <span> Sair</span>
+            </button>
+        </div>
+    </div>
+</nav>

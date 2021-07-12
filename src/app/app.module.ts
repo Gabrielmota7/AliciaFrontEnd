@@ -16,10 +16,16 @@ import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { PostagemComponent } from './postagem/postagem.component';
 import { TemaComponent } from './tema/tema.component';
+import { MenuLateralComponent } from './menu-lateral/menu-lateral.component';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
+import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
 
 
 @NgModule({
@@ -34,10 +40,12 @@ import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component'
     CadastrarComponent,
     PostagemComponent,
     TemaComponent,
+    MenuLateralComponent,
     PostagemEditComponent,
     PostagemDeleteComponent,
     TemaEditComponent,
-    TemaDeleteComponent
+    TemaDeleteComponent,
+    UsuarioEditComponent
 
 
 
@@ -46,7 +54,9 @@ import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component'
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule
   ],
   providers: [{
 

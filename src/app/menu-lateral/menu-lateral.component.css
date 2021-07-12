@@ -1,0 +1,154 @@
+.sticky {
+    position: relative;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 64px;
+}
+
+mat-toolbar {
+    background-color: none;
+    color: #A27FA8;
+    position: fixed;
+}
+
+.mat-sidenav {
+    margin: 16px;
+    
+    min-height: calc(100vh - 98px);
+    border-style: solid;
+    border-right: solid;
+    background: #ffffff;
+    color: #A27FA8;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+}
+
+span {
+    font-weight: bold;
+    font-size: 14pt
+}
+
+i {
+    margin-right: 10px;
+    font-size: 20pt;
+}
+
+button {
+  border-radius: 30px;
+  min-width: 190px;
+  min-height: 45px;  
+}
+
+button:hover {
+    color: #ffffff;
+    background-color: #A27FA8;
+}
+
+.menu-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1rem;
+}
+
+.content {
+    height: calc(100vh - 98px);
+    border-radius: 10px;
+    margin: 16px;
+    margin-left: 32px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+mat-icon {
+    margin-right: 8px;
+}
+
+.avatar {
+    margin-top: 16px;
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+}
+
+.name {
+    margin-top: 10px;
+    font-weight: normal;
+    font-size: 16pt;
+}
+
+.designation {
+    margin-top: 2px;
+    font-size: 0.8rem;
+    color: #A27FA8;
+}
+
+
+/* Menu Hamburguer */
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #A27FA8;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        
+        position: fixed;
+        left: -200%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 85vw;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+        border-right: solid;
+        border-left: solid;
+        border-color: #A27FA8;
+        min-height: 85vh;
+    }
+
+    .nav-menu.active {
+        position: relative;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 64px;
+        left: 0;
+        min-height: 90vh;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}

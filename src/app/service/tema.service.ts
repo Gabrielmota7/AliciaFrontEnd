@@ -36,9 +36,5 @@ export class TemaService {
   deleteTema(id: number){
     return this.http.delete(`https://projetoalicia.herokuapp.com/tema/${id}`, this.token)
   }
-  //Método criado pelo Gabriel
-  getByIdTema(id: number): Observable<Tema>{
-    return this.http.get<Tema>(`https://projetoalicia.herokuapp.com/tema/${id}`, this.token)
-  }
 
 }
