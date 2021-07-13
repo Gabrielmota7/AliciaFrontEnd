@@ -43,13 +43,14 @@
   background-color: #A27FA8;
 }
 .pBotao{
-  padding-right: 10px;
+  margin-right: 10px;
 }
 .mBotao{
   margin-right: 20px;
 }
 .pHome{
-  padding-left: 20px;
+  margin-right: 20px;
+  padding-left: 10px;
 }
 .pBotaoHome{
   padding-left: 10px;

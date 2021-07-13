@@ -17,6 +17,7 @@ export class MenuLateralComponent implements OnInit {
   foto = environment.foto
   hamburger: Element | null
   navMenu: Element | null
+  navLink: Element | null
   
 
   /*constructor private observer BreakpointObserver */
@@ -62,5 +63,15 @@ export class MenuLateralComponent implements OnInit {
     }
     
     
+  }
+
+  closeMenu() {
+    this.hamburger = document.querySelector(".hamburger");
+    this.navMenu = document.querySelector(".nav-menu");
+    if (this.hamburger != null && this.navMenu != null) {
+      this.hamburger.classList.remove("active");
+      this.navMenu.classList.remove("active");
+      window.scroll(0,0)
+    }
   }
 }

@@ -1,0 +1,30 @@
+.tam {
+    min-height: 175px;
+}
+
+.verde{
+    color:#00878b
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 24pt;
+    color: #A27FA8;
+}
+
+h4 {
+    font-size: 15pt;
+    color: #A27FA8;
+}
+
+.btn-outline-primary {
+    color: #03989e;
+    border-color: #03989e;
+    margin-left: 20px;
+    border-radius: 20px;
+}
+.btn-outline-primary:hover {
+    color: #fff;
+    background-color: #03989e;
+    border-color: #03989e;
+}
