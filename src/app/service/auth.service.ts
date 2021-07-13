@@ -17,7 +17,7 @@ export class AuthService {
   constructor(
     private http:HttpClient
   ) { }
-
+  // Métodos de Login e Cadastro
   entrar(usuarioLogin: UsuarioLogin):Observable<UsuarioLogin> {
     return this.http.post<UsuarioLogin>("https://projetoalicia.herokuapp.com/usuario/login",usuarioLogin)
   }
@@ -26,14 +26,27 @@ export class AuthService {
     return this.http.post<Usuario>("https://projetoalicia.herokuapp.com/usuario/cadastro",usuario)
   }
 
+  //Métodos PUT
   atualizar(usuario: Usuario):Observable<Usuario> {
     return this.http.put<Usuario>("https://projetoalicia.herokuapp.com/usuario/alterar", usuario, this.token)
+  }
+
+  //Métodos GET
+
+  getAllUsuario():Observable<Usuario[]> {
+    return this.http.get<Usuario[]>("https://projetoalicia.herokuapp.com/usuario", this.token)
   }
 
   getByIdUsuario(id: number): Observable<Usuario> {
     return this.http.get<Usuario>(`https://projetoalicia.herokuapp.com/usuario/${id}`, this.token)
   }
 
+  //Métodos DELETE
+  deleteUsuario(id:number) {
+    return this.http.delete(`https://projetoalicia.herokuapp.com/usuario/${id}`,this.token)
+  }
+
+  // Métodos de controle de exibição
   logado() {
     let ok: boolean = false;
 
@@ -52,6 +65,16 @@ export class AuthService {
     if(environment.interface != '') {
       ok = false;
     } else {
+      ok = true;
+    }
+
+    return ok;
+  }
+
+  foto() {
+    let ok: boolean = false;
+
+    if(environment.foto != "") {
       ok = true;
     }
 

@@ -12,6 +12,8 @@ import { PostagemComponent } from './postagem/postagem.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { TemaComponent } from './tema/tema.component';
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
+import { UsuarioComponent } from './usuario/usuario.component';
+import { UsuarioPerfilComponent } from './usuario-perfil/usuario-perfil.component';
 
 
 const routes: Routes = [
@@ -23,7 +25,9 @@ const routes: Routes = [
   //Rotas de usuario
   {path: "entrar", component: EntrarComponent},
   {path: "cadastrar", component: CadastrarComponent},
+  {path: "usuarios", component: UsuarioComponent},
   {path: 'usuario-edit/:id', component: UsuarioEditComponent},
+  {path: 'usuario-perfil/:id', component: UsuarioPerfilComponent},
   //Rotas de postagem
   {path: "postagem", component: PostagemComponent},
   {path: "postagem-edit/:id", component: PostagemEditComponent},

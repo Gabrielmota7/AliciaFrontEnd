@@ -1,0 +1,47 @@
+<h1 class="text-center mt-5">Usuárias</h1>
+<h4 class="text-center mt-3 mb-5">Veja todas Usuárias cadastradas em nossa Rede Social</h4>
+
+<!-- <div class="container">
+    <div class="row d-flex justify-content-evenly align-items-center bgcolorroxo">
+        <div class="col-md-3 d-flex justify-content-center p-zero  ">
+            <p>Texto</p>
+        </div>
+        <div class="col-md-3 d-flex justify-content-start p-zero">
+            <img src="../../assets/img/rafaela222.jpg" alt="" width="100%" height="100%" class = "img-fluid">
+        </div>
+        <div class="col-md-3 d-flex justify-content-center p-zero  ">
+            <p>Texto</p>
+        </div>
+        <div class="col-md-3 d-flex justify-content-start p-zero">
+            <img src="../../assets/img/rafaela222.jpg" alt="" width="100%" height="100%" class = "img-fluid">
+        </div>
+    </div>
+</div> 
+<i class="far fa-caret-square-down ms-4"></i>
+-->
+<div class="container mb-4" *ngFor='let item of listaUsuario | orderBy : key '>
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-8">
+            <a [routerLink] = "['/usuario-perfil',item.id]">
+                <div class="row d-flex justify-content-evenly align-items-center mb-4 clicavel borda">
+                    <div class="col-md-2">
+                        
+                    </div>
+                    <div class="col-md-2 d-flex justify-content-center my-2 me-1">
+                        <img *ngIf="foto(item)" src="{{item.foto}}" alt="" class="img-fluid rounded-circle imagem">
+                        <img *ngIf="!foto(item)" src="../../assets/img/defaultprofileicon.png"
+                            class="img-fluid rounded-circle imagem">
+                    </div>
+                    <div class="col-md-7 text-start">
+                        <p class="name m-zero">{{item.nome}}</p>
+                    </div>
+                    <div class="col-md-1">
+
+                    </div>
+
+                </div>
+            </a>
+        </div>
+    </div>
+
+</div>

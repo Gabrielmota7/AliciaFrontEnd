@@ -1,0 +1,64 @@
+.avatar {
+    margin-top: 16px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.name {
+    font-size: 28pt;
+    color: #A27FA8;
+    text-align: start;
+}
+
+.dataNascimento {
+    font-size: 18pt;
+    color: #A27FA8;
+    text-align: start;
+}
+
+.startupTitulo {
+    font-size: 18pt;
+    color: #A27FA8;
+    text-align: start;
+    font-weight: bold;
+}
+
+.startup {
+    font-size: 18pt;
+    color: #A27FA8;
+    text-align: start;
+    font-weight: none;
+}
+
+.resumo {
+    font-size: 16pt;
+    color: #A27FA8;
+    font-weight: none;
+    text-align: justify;
+}
+
+.roxo {
+    color:#A27FA8
+}
+
+.icone {
+    font-size: 36pt;
+    color: #A27FA8;
+}
+
+.icone:hover {
+    font-size: 36pt;
+    color: #03989e;
+}
+
+@media only screen and (max-width: 1025px) {
+    .name {
+        text-align: center;
+    }
+
+    .dataNascimento {
+        text-align: center;
+    }
+
+}

@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from '@angular/forms';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { OrderModule } from 'ngx-order-pipe';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,6 +27,8 @@ import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delet
 import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
+import { UsuarioComponent } from './usuario/usuario.component';
+import { UsuarioPerfilComponent } from './usuario-perfil/usuario-perfil.component';
 
 
 @NgModule({
@@ -45,7 +48,9 @@ import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component
     PostagemDeleteComponent,
     TemaEditComponent,
     TemaDeleteComponent,
-    UsuarioEditComponent
+    UsuarioEditComponent,
+    UsuarioComponent,
+    UsuarioPerfilComponent
 
 
 
@@ -56,7 +61,8 @@ import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    OrderModule
   ],
   providers: [{
 

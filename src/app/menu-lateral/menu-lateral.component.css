@@ -78,9 +78,16 @@ mat-icon {
     border-radius: 50%;
 }
 
+.tam {
+    width:70%
+}
+.tam-max{
+    max-width: 250px;
+}
+
 .name {
     margin-top: 10px;
-    font-weight: normal;
+    font-weight: bold;
     font-size: 16pt;
 }
 
@@ -106,7 +113,7 @@ mat-icon {
     background-color: #A27FA8;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
     .nav-menu {
         
         position: fixed;
