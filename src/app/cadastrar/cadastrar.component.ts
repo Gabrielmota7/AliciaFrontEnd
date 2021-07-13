@@ -33,6 +33,9 @@ export class CadastrarComponent implements OnInit {
   }
 
   cadastrar() {
+    console.log(this.usuario.senha)
+    console.log(this.confirmarSenha)
+    console.log(this.usuario)
     if(this.usuario.senha != this.confirmarSenha) {
       alert('Senhas incompatíveis, por favor digite e confirme sua senha novamente')
     } else {

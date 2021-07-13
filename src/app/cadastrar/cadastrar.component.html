@@ -74,8 +74,8 @@
 
     </div>
 
-</div>
- -->
+</div> -->
+
 
 <div class="col-12 bg-img">
 
@@ -100,64 +100,66 @@
           <div class="input-group m-2">
 
             <div class="col-6">
-              <div class="row me-2">
-                <label for="name-id"> Nome
-                  <input id="name-id" class="form-control" placeholder="Digite seu nome">
+              <div class="row me-2 mb-3">
+                <label for="nome"> Nome
+                  <input [(ngModel)]='usuario.nome' name="nome" id ="nome" class="form-control" placeholder="Digite seu nome">
                 </label>
               </div>
             </div>
 
             <div class="col-6">
-              <div class="row me-2">
-                <label for="name-id"> E-mail
-                  <input id="name-id" type="email" class="form-control" placeholder="nome@example.com">
+              <div class="row me-2 mb-3">
+                <label for="login"> E-mail
+                  <input [(ngModel)]='usuario.login' name="login" id ="login" type="email" class="form-control" placeholder="nome@example.com">
                 </label>
               </div>
             </div>
 
             <div class="col-6">
-              <div class="row-me-2">
-                <label for="name-id"> Data de Nascimento
-                  <input id="name-id" style="width: 162%;" type="date" class="form-control">
+              <div class="row-me-2 mb-3">
+                <label for="dataNascimento"> Data de Nascimento
+                  <input [(ngModel)]='usuario.dataNascimento' id="dataNascimento" name="dataNascimento" type="text" class="form-control data" placeholder="Insira a data dd-mm-aaaa">
+                </label>
+              </div>
+            </div>
+
+<!--             <div class="col-6">
+              <div class="row me-2">
+                <label for="nomeStartUp"> Start-up
+                  <input [(ngModel)]='usuario.nomeStartUp' id="nomeStartUp" name="nomeStartUp" class="form-control" placeholder="Digite o nome da sua start-up">
+                </label>
+              </div>
+            </div> -->
+
+            <div class="col-6">
+              <div class="row me-2 mb-3">
+                <label for="foto"> Link da foto
+                  <input [(ngModel)]='usuario.foto' type="text" name="foto" id="foto" type="url" class="form-control" placeholder="https://url_da_img.net">
                 </label>
               </div>
             </div>
 
             <div class="col-6">
-              <div class="row me-2">
-                <label for="name-id"> Start-up
-                  <input id="name-id" class="form-control" placeholder="Digite o nome da sua start-up">
+              <div class="row me-2 mb-3">
+                <label for="senha"> Senha
+                  <input (input)='confirmSenha($event)' name="senha" id="senha" type="password" class="form-control">
                 </label>
               </div>
             </div>
 
             <div class="col-6">
-              <div class="row me-2">
-                <label for="name-id"> Senha
-                  <input id="name-id" type="password" class="form-control">
+              <div class="row me-2 mb-3">
+                <label for="confirmSenha"> Confirmar Senha
+                  <input [(ngModel)]='usuario.senha' name="confirmSenha" id ="confirmSenha" type="password" class="form-control">
                 </label>
               </div>
             </div>
 
-            <div class="col-6">
-              <div class="row me-2">
-                <label for="name-id"> Confirmar Senha
-                  <input id="name-id" type="password" class="form-control">
-                </label>
-              </div>
-            </div>
 
-            <div class="col-12">
-              <div class="row me-2">
-                <label for="name-id"> Link da foto
-                  <input id="name-id" type="url" class="form-control" placeholder="https://url_da_img.net">
-                </label>
-              </div>
-            </div>
           </div>
         </div>
 
-        <div class="d-flex justify-content-center mt-5">
+        <div class="d-flex justify-content-center mt-4">
           <button type="submit" class="btn btn-outline-primary btn-outline-primary:hover m-2"
             routerLink='/entrar'>Cancelar</button>
           <button type="submit" class="btn btn-outline-primary2 btn-outline-primary2:hover m-2"
