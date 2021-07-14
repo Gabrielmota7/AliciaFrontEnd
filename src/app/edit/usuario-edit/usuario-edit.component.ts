@@ -2,6 +2,7 @@ import { HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Usuario } from 'src/app/model/Usuario';
+import { AlertasService } from 'src/app/service/alertas.service';
 import { AuthService } from 'src/app/service/auth.service';
 import { environment } from 'src/environments/environment.prod';
 
@@ -17,7 +18,9 @@ export class UsuarioEditComponent implements OnInit {
 
   constructor(private authService: AuthService,
     private route: ActivatedRoute,
-    private router: Router) { }
+    private router: Router,
+    private alertas: AlertasService
+    ) { }
 
   ngOnInit() {
     if (environment.token == '') {
@@ -40,15 +43,22 @@ export class UsuarioEditComponent implements OnInit {
   }
 
   atualizar() {
-    this.authService.atualizar(this.usuario).subscribe((resp: Usuario) => {
-      this.usuario = resp
-      alert("Usuario atualizado com sucesso, por favor faça o login novamente!")
-      this.router.navigate(['/entrar'])
-      environment.token = ''
-      environment.nome = ''
-      environment.id = 0
-      environment.foto = ''
-    })
+    if(this.usuario.senha == '') {
+      this.alertas.showAlertDanger("Por favor, não deixe o campo de Senha vazio ao atualizar seus dados!")
+    } else {
+
+      this.authService.atualizar(this.usuario).subscribe((resp: Usuario) => {
+        this.usuario = resp
+        this.alertas.showAlertSuccess("Usuária atualizado com sucesso, por favor faça o login novamente!")
+        this.router.navigate(['/entrar'])
+        environment.token = ''
+        environment.nome = ''
+        environment.id = 0
+        environment.foto = ''
+      })
+
+    }
+
   }
 
 }

@@ -4,6 +4,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from '@angular/forms';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { OrderModule } from 'ngx-order-pipe';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -29,6 +30,7 @@ import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component'
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { UsuarioPerfilComponent } from './usuario-perfil/usuario-perfil.component';
+import { AlertasComponent } from './alertas/alertas.component';
 
 
 @NgModule({
@@ -50,7 +52,8 @@ import { UsuarioPerfilComponent } from './usuario-perfil/usuario-perfil.componen
     TemaDeleteComponent,
     UsuarioEditComponent,
     UsuarioComponent,
-    UsuarioPerfilComponent
+    UsuarioPerfilComponent,
+    AlertasComponent
 
 
 
@@ -62,7 +65,8 @@ import { UsuarioPerfilComponent } from './usuario-perfil/usuario-perfil.componen
     FormsModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    OrderModule
+    OrderModule,
+    ModalModule.forRoot()
   ],
   providers: [{
 
