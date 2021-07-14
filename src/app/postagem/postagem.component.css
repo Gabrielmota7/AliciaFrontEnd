@@ -58,3 +58,20 @@
     background-color: #fff;
     border-color: #da3c3c;
   }
+
+.imagem {
+  min-height: 50px;
+  min-width: 50px;
+  max-height: 65px;
+  max-width: 65px;
+}
+
+.imagempostagem {
+  min-width: 80%;
+}
+
+.name {
+  font-size: 18pt;
+  font-family: Roboto;
+  color: #A27FA8;
+}
