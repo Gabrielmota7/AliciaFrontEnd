@@ -26,15 +26,6 @@ export class CadastrarComponent implements OnInit {
   ) { }
 
   ngOnInit(){
-    if(environment.token != '') {
-      this.alertas.showAlertInfo("Sessão expirada, por favor faça o login novamente.")
-      this.router.navigate(['/cadastrar'])
-      environment.token = ''
-      environment.nome =  ''
-      environment.id = 0
-      environment.foto = ''
-    }
-
     window.scroll(0,0);
     environment.interface = "0";
   }
