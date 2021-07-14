@@ -28,6 +28,7 @@ import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component'
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
 import { StartupsComponent } from './startups/startups.component';
 import { AlertasComponent } from './alertas/alertas.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 @NgModule({
@@ -60,7 +61,8 @@ import { AlertasComponent } from './alertas/alertas.component';
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    ModalModule.forRoot()
   ],
   providers: [{
 

@@ -40,7 +40,7 @@ export class EntrarComponent implements OnInit {
       environment.nome = this.usuarioLogin.nome;
       environment.foto = this.usuarioLogin.foto;
 
-      alert("Login com sucesso")
+     this.alertas.showAlertSucess("Login com sucesso")
 
       /*Para testes:
         console.log(environment.id)
