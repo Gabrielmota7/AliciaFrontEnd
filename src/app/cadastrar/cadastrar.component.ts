@@ -41,6 +41,9 @@ export class CadastrarComponent implements OnInit {
     if(this.usuario.senha != this.confirmarSenha) {
       this.alertas.showAlertDanger('Senhas incompatíveis, por favor digite e confirme sua senha novamente')
     } else {
+      if(this.usuario.foto == null) {
+        this.usuario.foto = "";
+      }
       this.authService.cadastrar(this.usuario).subscribe((resp: Usuario) => {
         this.usuario = resp
         this.router.navigate(['/entrar'])

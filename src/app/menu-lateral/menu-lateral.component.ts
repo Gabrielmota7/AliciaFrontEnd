@@ -2,7 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { environment } from 'src/environments/environment.prod';
 import { BreakpointObserver } from '@angular/cdk/layout';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AuthService } from '../service/auth.service';
 @Component({
   selector: 'app-menu-lateral',
   templateUrl: './menu-lateral.component.html',
@@ -22,7 +23,11 @@ export class MenuLateralComponent implements OnInit {
 
   /*constructor private observer BreakpointObserver */
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    public authService: AuthService
+    ) { }
 
   ngOnInit(){
     console.log(environment)

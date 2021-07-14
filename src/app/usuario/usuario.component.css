@@ -1,0 +1,56 @@
+a {
+    text-decoration: none;
+}
+
+.bgcolorroxo{
+    background-color: rgba(162,127,168, 0.25)
+}
+
+.p-zero {
+    padding: 0px;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 24pt;
+    color: #03989e;
+}
+
+h4 {
+    font-size: 15pt;
+    color: #03989e;
+}
+
+.imagem{
+    min-width: 100px;
+    min-height: 100px;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.name {
+    font-size: 21pt;
+    font-family: Roboto;
+    color: #A27FA8;
+}
+
+.clicavel {
+    cursor: pointer;
+}
+
+.borda {
+    border: solid;
+    border-color: #A27FA8;
+    border-radius: 50px;
+}
+
+.m-zero{
+    margin: 0px;
+}
+
+@media only screen and (max-width: 1025px) {
+    .name {
+        text-align: center;
+    }
+}
+

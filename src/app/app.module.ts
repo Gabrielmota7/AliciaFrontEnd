@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from '@angular/forms';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { OrderModule } from 'ngx-order-pipe';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,10 +28,11 @@ import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delet
 import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
-import { StartupsComponent } from './startups/startups.component';
+import { UsuarioComponent } from './usuario/usuario.component';
+import { UsuarioPerfilComponent } from './usuario-perfil/usuario-perfil.component';
 import { AlertasComponent } from './alertas/alertas.component';
-import { ModalModule } from 'ngx-bootstrap/modal';
-import { OrderModule } from 'ngx-order-pipe';
+import { StartupsComponent } from './startups/startups.component';
+
 
 
 @NgModule({
@@ -50,6 +53,8 @@ import { OrderModule } from 'ngx-order-pipe';
     TemaEditComponent,
     TemaDeleteComponent,
     UsuarioEditComponent,
+    UsuarioComponent,
+    UsuarioPerfilComponent,
     StartupsComponent,
     AlertasComponent
 
@@ -63,8 +68,9 @@ import { OrderModule } from 'ngx-order-pipe';
     FormsModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    ModalModule.forRoot(),
-    OrderModule
+
+    OrderModule,
+    ModalModule.forRoot()
   ],
   providers: [{
 
