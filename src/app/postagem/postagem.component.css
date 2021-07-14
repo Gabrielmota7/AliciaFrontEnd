@@ -58,3 +58,11 @@
     background-color: #fff;
     border-color: #da3c3c;
   }
+
+  .coricone{
+    color: #a27fa8;
+  }
+
+  a{
+    cursor: pointer
+  }
