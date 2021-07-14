@@ -114,6 +114,7 @@ export class PostagemComponent implements OnInit {
     })
   }
 
+
   foto(usuario: Usuario) {
     if(usuario.foto != "") {
       return true
@@ -121,5 +122,6 @@ export class PostagemComponent implements OnInit {
       return false
     }
   }
+
 
 }

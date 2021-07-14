@@ -126,17 +126,19 @@
                     </div>
                 </div> -->
                 <div>
-                    <img src={{postagem.midia}} alt="Imagem da postagem" class="img-fluid text-center imagempostagem"
+
+                    <img src={{postagem.midia}} alt="Imagem da postagem" class="img-fluid text-center imagempostagem" width="1200px" height="630px"
+
                         *ngIf="imagem(postagem)">
                 </div>
                 <div>
                     <small class="text-muted mt-2">Tema: {{postagem.tema.descricao}}</small>
                 </div>
             </div>
-            <div class="mt-2">
+           <!-- <div class="mt-2">
                 <img width="15px" height="15px" src="assets/img/like.png" alt="imagem like">Curtir | <img width="15px"
                     height="15px" src="assets/img/share.png" alt="imagem share">Compartilhar
-            </div>
+            </div> -->
             <div class="mt-2">
                 <p class="card-text"><small class="text-muted">{{postagem.dataPostagem | date: 'dd/MM/yyyy'}} às
                         {{postagem.dataPostagem | date: 'HH:mm'}}</small></p>
@@ -199,7 +201,6 @@
         <div class="mb-5 mt-5">
             <button type="submit" class="btn btn-success" (click)='postar()'>Postar</button>
         </div>
-
     </div>
 </div>
 <div class="container mb-3 mt-3">
@@ -208,20 +209,14 @@
             <h2 class="text-center">Todas as Postagens</h2>
         </div>
     </div>
-
-
-
-
     <div class="row mt-3 mb-5 d-flex justify-content-center">
         <div class="col-md-6">
-
             <table class="table table-hover">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Descrição</th>
                         <th scope="col" class="text-right">Modificações</th>
-
                     </tr>
                 </thead>
                 <tbody>
@@ -230,14 +225,10 @@
                         <td>{{postagem.texto}}</td>
                         <td><button class="btn btn-info m-3" [routerLink]="['/postagem-edit', postagem.id]">Editar</button>
                             <button class="btn btn-danger" [routerLink]="['/postagem-delete', postagem.id]">Apagar</button>
-
                         </td>
-
                     </tr>
-
                 </tbody>
             </table>
-
         </div>
     </div>
 </div> -->
