@@ -31,6 +31,8 @@ import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component
 import { UsuarioComponent } from './usuario/usuario.component';
 import { UsuarioPerfilComponent } from './usuario-perfil/usuario-perfil.component';
 import { AlertasComponent } from './alertas/alertas.component';
+import { StartupsComponent } from './startups/startups.component';
+
 
 
 @NgModule({
@@ -53,6 +55,7 @@ import { AlertasComponent } from './alertas/alertas.component';
     UsuarioEditComponent,
     UsuarioComponent,
     UsuarioPerfilComponent,
+    StartupsComponent,
     AlertasComponent
 
 
@@ -65,6 +68,7 @@ import { AlertasComponent } from './alertas/alertas.component';
     FormsModule,
     BrowserAnimationsModule,
     MatButtonModule,
+
     OrderModule,
     ModalModule.forRoot()
   ],

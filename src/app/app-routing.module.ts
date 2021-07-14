@@ -14,6 +14,7 @@ import { TemaComponent } from './tema/tema.component';
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { UsuarioPerfilComponent } from './usuario-perfil/usuario-perfil.component';
+import { StartupsComponent } from './startups/startups.component';
 
 
 const routes: Routes = [
@@ -35,8 +36,9 @@ const routes: Routes = [
   //Rotas de tema
   {path: "tema", component: TemaComponent},
   {path: "tema-edit/:id", component: TemaEditComponent},
-  {path: "tema-delete/:id", component: TemaDeleteComponent}
-
+  {path: "tema-delete/:id", component: TemaDeleteComponent},
+  // Outras rotas
+  {path: "startups", component: StartupsComponent}
 ];
 
 @NgModule({

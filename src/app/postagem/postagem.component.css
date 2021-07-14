@@ -1,0 +1,60 @@
+.form-cadastro {
+    margin: auto;
+    width: 45%;
+    padding: 10px;
+    border: 1px solid #fff;
+    margin-top: 100px;
+    height: 80vh;
+    background-color: #fff;
+  }
+
+  .btn-outline-primary2:hover {
+    color: #fff;
+    background-color: #a27fa8;
+    border-color: #a27fa8;
+  }
+
+  .btn-outline-primary2 {
+    color: #a27fa8;
+    border-color: #a27fa8;
+    margin-right: 20px;
+  }
+
+  .button:hover {
+    color: #ffffff;
+    background-color: #A27FA8;
+}
+
+.borda-forma {
+    border: 2px solid #a27fa8;
+    border-radius: 4px;
+  }
+
+.botao-modal{
+    color: #03989e;
+
+}
+
+.btn-outline-primary:hover {
+    color: #fff;
+    background-color: #fff;
+    border-color: #03989e;
+  }
+
+  .btn-outline-primary3 {
+    color: #03989e;
+    border-color: #03989e;
+    margin-right: 20px;
+  }
+
+  .btn-outline-primary5 {
+      color: #fff;
+      background-color: #da3c3c;
+      margin-right: 20px;
+  }
+
+  .btn-mouse:hover {
+    color: #da3c3c;
+    background-color: #fff;
+    border-color: #da3c3c;
+  }

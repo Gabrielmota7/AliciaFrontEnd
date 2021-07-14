@@ -1,0 +1,259 @@
+<!-- <div class="container-fluid tela" id="bg-img">
+    <div class="row">
+        <div class="col-md-6 mt-5 mb-7">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-10">
+                    <div class="col-md-9 card mt-1 border-0">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-md-4 mt-2 mt-5 d-flex justify-content-center">
+                                <img src="../../assets/img/alícia.png" alt="Logo Alicia" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-md-4 mt-2 d-flex justify-content-center mt-2">
+                                <h6>Cadastre-se</h6>
+                            </div>
+                        </div>
+                        <div class="form-group mb-1 m-4">
+                          <label for="floatingInput">Email</label>
+                            <input [(ngModel)]='usuario.login' type="email" class="form-control" id="floatingInput"
+                                placeholder="nome@exemplo.com">
+
+                        </div>
+                        <div class="form-group mb-1 m-4">
+                          <label for="floatingPassword">Senha</label>
+                            <input (input)='confirmSenha($event)' type="password" class="form-control"
+                                id="floatingPassword" placeholder="Senha">
+
+                        </div>
+                        <div class="form-group mb-1 m-4">
+                          <label for="floatingPassword">Confirmar Senha</label>
+                            <input [(ngModel)]='usuario.senha' type="password" class="form-control"
+                                id="floatingPassword" placeholder="Confirmar Senha">
+
+                        </div>
+                        <div class="form-group mb-1 m-4">
+                          <label for="floatingInput">Nome</label>
+                            <input [(ngModel)]='usuario.nome' type="text" class="form-control" id="floatingInput"
+                                placeholder="Digite seu Nome">
+
+                        </div>
+                        <div class="form-group mb-1 m-4">
+                          <label for="floatingInput">Data de Nascimento (dd-mm-aaaa)</label>
+                            <input [(ngModel)]='usuario.dataNascimento' type="text" class="form-control"
+                                id="floatingInput" placeholder="Insira a data dd/mm/aaaa">
+
+                        </div>
+                        <div class="form-group mb-1 m-4">
+                          <label for="floatingInput">Start-up</label>
+                            <input [(ngModel)]='usuario.nomeStartUp' type="text" class="form-control" id="floatingInput"
+                                placeholder="Digite o nome da sua Start-up">
+
+                        </div>
+                        <div class="form-group mb-1 m-4">
+                          <label for="floatingInput">Link da Foto</label>
+                            <input [(ngModel)]='usuario.foto' type="text" class="form-control" id="floatingInput"
+                                placeholder="Insira aqui a sua foto">
+
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="btn btn-outline-primary btn-outline-primary:hover m-4"
+                                routerLink='/entrar'>Cancelar</button>
+                            <button type="submit" class="btn btn-outline-primary2 btn-outline-primary2:hover m-4"
+                                (click)='cadastrar()'>Cadastrar</button>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</div> -->
+
+
+<div class="col-12 bg-img">
+
+  <div class="form-cadastro border border-4">
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-4 mt-2 mt-5 d-flex justify-content-center">
+        <img src="../../assets/img/alícia.png" alt="Logo Alicia" class="img-fluid">
+      </div>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-12 mt-2 d-flex justify-content-center mt-2">
+        <h6>Cadastre-se</h6>
+      </div>
+    </div>
+
+
+    <form>
+
+      <div class="col-12">
+        <div class="row">
+          <div class="input-group m-2">
+
+            <div class="col-6">
+              <div class="row me-2 mb-3">
+                <label for="nome"> Nome
+                  <input [(ngModel)]='usuario.nome' name="nome" id ="nome" class="form-control" placeholder="Digite seu nome">
+                </label>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="row me-2 mb-3">
+                <label for="login"> E-mail
+                  <input [(ngModel)]='usuario.login' name="login" id ="login" type="email" class="form-control" placeholder="nome@example.com">
+                </label>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="row-me-2 mb-3">
+                <label for="dataNascimento"> Data de Nascimento
+                  <input [(ngModel)]='usuario.dataNascimento' id="dataNascimento" name="dataNascimento" type="text" class="form-control data" placeholder="Insira a data dd-mm-aaaa">
+                </label>
+              </div>
+            </div>
+
+<!--             <div class="col-6">
+              <div class="row me-2">
+                <label for="nomeStartUp"> Start-up
+                  <input [(ngModel)]='usuario.nomeStartUp' id="nomeStartUp" name="nomeStartUp" class="form-control" placeholder="Digite o nome da sua start-up">
+                </label>
+              </div>
+            </div> -->
+
+            <div class="col-6">
+              <div class="row me-2 mb-3">
+                <label for="foto"> Link da foto
+                  <input [(ngModel)]='usuario.foto' type="text" name="foto" id="foto" type="url" class="form-control" placeholder="https://url_da_img.net">
+                </label>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="row me-2 mb-3">
+                <label for="senha"> Senha
+                  <input (input)='confirmSenha($event)' name="senha" id="senha" type="password" class="form-control">
+                </label>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="row me-2 mb-3">
+                <label for="confirmSenha"> Confirmar Senha
+                  <input [(ngModel)]='usuario.senha' name="confirmSenha" id ="confirmSenha" type="password" class="form-control">
+                </label>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-center mt-4">
+          <button type="submit" class="btn btn-outline-primary btn-outline-primary:hover m-2"
+            routerLink='/entrar'>Cancelar</button>
+          <button type="submit" class="btn btn-outline-primary2 btn-outline-primary2:hover m-2"
+            (click)='cadastrar()'>Cadastrar</button>
+        </div>
+
+      </div>
+
+    </form>
+  </div>
+</div>
+
+<!--
+
+  <div class="container-fluid tela" id="bg-img">
+    <div class="row">
+      <div class="col-md-12 mt-5 mb-7">
+        <div class="row d-flex justify-content-center">
+
+          <div class="col-md-6">
+            <div class="col-md-12 card mt-1 border-4 cor-borda">
+              <div class="row d-flex justify-content-center">
+                <div class="col-md-4 mt-2 mt-5 d-flex justify-content-center">
+                  <img src="../../assets/img/alícia.png" alt="Logo Alicia" class="img-fluid">
+                </div>
+              </div>
+              <div class="row d-flex justify-content-center">
+                <div class="col-md-12 mt-2 d-flex justify-content-center mt-2">
+                  <h6>Cadastre-se</h6>
+                </div>
+              </div>
+              <form class="row g-3">
+                <div class="row">
+                  <div class="col-md-6 pl-nome">
+                    <label for="floatingInput">Nome</label>
+                    <input [(ngModel)]='usuario.nome' type="text" class="form-control ml-5 wid" id="floatingInput"
+                      placeholder="Digite seu nome">
+
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="floatingInput">Email</label>
+
+                    <input [(ngModel)]='usuario.login' type="email" class="form-control wid" id="floatingInput"
+                      placeholder="nome@exemplo.com">
+
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-6 col-md-6 ">
+                    <label for="floatingInput">Data de Nascimento</label>
+                    <input [(ngModel)]='usuario.dataNascimento' type="text" class="form-control wid" id="floatingInput"
+                      placeholder="Formato dd/mm/aaaa">
+
+                  </div>
+
+
+                  <div class="col-sm-6 col-md-6">
+                    <label for="floatingInput">Start-up</label>
+                    <input [(ngModel)]='usuario.nomeStartUp' type="text" class="form-control  wid" id="floatingInput"
+                      placeholder="Digite o nome da sua Start-up">
+
+                  </div>
+                </div>
+
+
+                <div class="col-md-12 ml-10">
+                  <label for="floatingPassword">Senha</label>
+                  <input (input)='confirmSenha($event)' type="password" class="form-control wid" id="floatingPassword"
+                    placeholder="Senha">
+                </div>
+
+
+
+                <div class="col-12 ml-10">
+                  <label for="floatingPassword">Confirmar Senha</label>
+                  <input [(ngModel)]='usuario.senha' type="password" class="form-control wid" id="floatingPassword"
+                    placeholder="Confirmar senha">
+
+
+                </div>
+                <div class="col-md-4 ml-10">
+                  <label for="floatingInput">Link da Foto</label>
+                  <input [(ngModel)]='usuario.foto' type="text" class="form-control wid3" id="floatingInput"
+                    placeholder="Insira aqui a sua foto">
+                </div>
+
+                <div class="d-flex justify-content-center">
+                  <button type="submit" class="btn btn-outline-primary btn-outline-primary:hover m-2"
+                    routerLink='/entrar'>Cancelar</button>
+                  <button type="submit" class="btn btn-outline-primary2 btn-outline-primary2:hover m-2"
+                    (click)='cadastrar()'>Cadastrar</button>
+                </div>
+              </form>
+-->
+

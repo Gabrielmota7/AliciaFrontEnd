@@ -1,4 +1,103 @@
-<div class="container mb-5 mt-5">
+<div class="container mt-4">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-12 card d-flex justify-content-center">
+            <div class="row d-flex justify-content-center">
+            <div class="col-md-8 mt-4">
+                
+                    
+                <div class="mb-3 m-1">
+                    <p class="align-center">Selecione um tema para postagem</p>
+                    <select [(ngModel)]="idTema" class="form-select form-control borda-forma" aria-label="Default select example" (change)="findByIdTema()">
+                        <option value = '' class = "text-secondary">Selecione um tema</option>
+                        <option [(ngModel)] = 'postagem.tema' *ngFor='let tema of listaTemas' value="{{tema.id}}">{{tema.descricao}}</option>
+                    </select>
+                </div>
+                
+                <div class="form-floating mb-3 border-0 m-1">
+                    <input [(ngModel)]='postagem.texto' type="text" class="form-control borda-forma" id="floatingInput" placeholder="texto da postagem">
+                    <label for="floatingInput">Com o que iremos inovar hoje ?</label>
+                  </div>
+                  <div>     
+                <a class="button:hover" data-bs-toggle="modal" data-bs-target="#imagem">               
+                 <img width="20px" height="20px" src="assets/img/image2.png" alt="icone de img">Foto</a>
+                 
+                         
+                  </div>
+                  <div class="d-flex justify-content-end">
+                    <button class="btn btn-outline-primary2 btn-outline-primary2:hover d-flex align-items-end mb-4" (click)='postar()'> Postar </button>
+                  </div>                
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-12 card mt-4" *ngFor='let postagem of listaPostagem | orderBy : key : reverse'>
+            <div class="card-body">               
+                <div class="">
+                <img src={{usuario.foto}} alt="Imagen do User" width="50px" height="50px" class="img-fluid rounded-circle">
+                <p class="m-0 font-weight-bold">{{usuario.nome}}</p>
+                <button class="btn btn-outline-primary2 btn-outline-primary2:hover m-3 align-items-end" [routerLink]="['/postagem-edit', postagem.id]">Editar</button>
+                <button class="btn btn-outline-primary2 btn-outline-primary2:hover m-3 align-items-end" [routerLink]="['/postagem-delete', postagem.id]">Apagar</button>
+                </div>
+                <div class="d-flex justify-content-end">
+                   
+                </div>
+                <div>
+                <small class="text-muted">Tema: {{postagem.tema.descricao}}</small>
+                </div>
+                <div>
+                <img src= {{postagem.midia}} alt="Imagem da postagem" width="700px" height="500px" *ngIf="imagem(postagem)">                               
+                </div>
+                <div>
+                <p class="card-text mt-3">{{postagem.texto}}</p>
+            </div>
+            <div class="mt-2">
+                <img width="15px" height="15px" src="assets/img/like.png" alt="imagem like">Curtir | <img width="15px" height="15px" src="assets/img/share.png" alt="imagem share">Compartilhar
+            </div>
+            <div class="mt-2">
+                <p class="card-text"><small class="text-muted">{{postagem.dataPostagem | date: 'dd/MM/yyyy'}} às {{postagem.dataPostagem | date: 'HH:mm'}}</small></p>
+            </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+
+
+<ng-template #show></ng-template>
+<ng-template #nada></ng-template>
+
+
+<!-- MODAL -->
+<div class="modal" id="imagem">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Adicione o url da imagem</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon3">https://exemplo.com/</span>
+                <input [(ngModel)]='postagem.midia' type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+              </div>
+              
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-primary3 btn-outline-primary:hover" data-bs-dismiss="modal">Adicionar</button>         
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!--  <div class="container mb-5 mt-5">
     <div class="row d-flex justify-content-center">
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Midia</label>
@@ -60,4 +159,4 @@
 
         </div>
     </div>
-</div>
+</div> -->
