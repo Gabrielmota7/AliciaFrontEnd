@@ -59,6 +59,7 @@
     border-color: #da3c3c;
   }
 
+
 .imagem {
   min-height: 50px;
   min-width: 50px;
@@ -75,3 +76,12 @@
   font-family: Roboto;
   color: #A27FA8;
 }
+
+  .coricone{
+    color: #a27fa8;
+  }
+
+  a{
+    cursor: pointer
+  }
+
