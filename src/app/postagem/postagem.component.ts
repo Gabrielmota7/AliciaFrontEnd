@@ -25,6 +25,9 @@ export class PostagemComponent implements OnInit {
   usuario: Usuario = new Usuario()
   idUsuario = environment.id
 
+  key = 'data'
+  reverse = true
+
   constructor(
     private router: Router,
     private postagemService: PostagemService,
@@ -76,6 +79,24 @@ export class PostagemComponent implements OnInit {
       this.findAllTemas()
       this.findAllPostagens()
     })
+  }
+
+  imagem(postagem: Postagem){
+    if(postagem.midia != null){
+      return true
+    }else{
+      return false
+    }
+
+  }
+
+  imagemUsuario(usuario: Usuario){
+    if(usuario.foto != null){
+      return true
+    }else{
+      return false
+    }
+
   }
 
   findByIdTema(){

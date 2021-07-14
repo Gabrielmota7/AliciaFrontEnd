@@ -3,16 +3,16 @@
     cursor: pointer;
     display: inline-block;
     vertical-align: middle;
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 200;
-    font-family: Arial, Helvetica, sans-serif;
+    font-stretch: wider;
+    font-family: Roboto;
     overflow: hidden;
-    width: 60%;
+    width: 50%;
     outline-width: 9px;
     position: relative;
     text-align: center;
     text-decoration: none;
-    border: 3px;
     transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
     vertical-align: middle;
     z-index: 0;
@@ -21,6 +21,17 @@
     padding: .375rem .75rem;
     line-height: 1.5;
     border-radius: .25rem;
+    z-index: 9999;
+    text-transform: uppercase;
+    border-radius: 50px;
+    border: 3px solid transparent;
+    transition: .5s;
+}
+
+.botao-entrar:hover{
+  text-decoration: none;
+  color: white;
+  background-color: #A27FA8;
 }
 
 
@@ -60,4 +71,44 @@
 
 .mt-50 {
   margin-top: 20vh;
+}
+
+.tammax {
+  max-width: 450px;
+}
+
+.btn-outline-primary {
+  color: #03989e;
+  border-color: #03989e;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1rem;
+  font-weight: 200;
+  font-stretch: wider;
+  font-family: Roboto;
+  overflow: hidden;
+  width: 50%;
+  outline-width: 9px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  vertical-align: middle;
+  z-index: 0;
+  transition-property: background-color,box-shadow,color,-webkit-box-shadow;
+  transition-duration: 167ms;
+  padding: .375rem .75rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  z-index: 9999;
+  text-transform: uppercase;
+  border-radius: 30px;
+  transition: .5s;
+}
+
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: #03989e;
+  border-color: #03989e;
 }

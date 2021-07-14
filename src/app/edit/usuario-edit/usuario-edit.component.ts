@@ -19,12 +19,12 @@ export class UsuarioEditComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router) { }
 
-  ngOnInit(){
-    if(environment.token == ''){
+  ngOnInit() {
+    if (environment.token == '') {
       this.router.navigate(['/entrar'])
     } else {
       this.authService.token = {
-        headers: new HttpHeaders().set('Authorization',environment.token)
+        headers: new HttpHeaders().set('Authorization', environment.token)
       }
     }
 
@@ -35,14 +35,19 @@ export class UsuarioEditComponent implements OnInit {
   findByIdUser(id: number) {
     this.authService.getByIdUsuario(id).subscribe((resp: Usuario) => {
       this.usuario = resp
+      this.usuario.senha = ''
     })
   }
 
   atualizar() {
     this.authService.atualizar(this.usuario).subscribe((resp: Usuario) => {
       this.usuario = resp
-      alert("Usuario atualizado com sucesso")
-      environment.nome = this.usuario.nome
+      alert("Usuario atualizado com sucesso, por favor faça o login novamente!")
+      this.router.navigate(['/entrar'])
+      environment.token = ''
+      environment.nome = ''
+      environment.id = 0
+      environment.foto = ''
     })
   }
 
