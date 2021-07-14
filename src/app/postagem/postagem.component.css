@@ -58,3 +58,28 @@
     background-color: #fff;
     border-color: #da3c3c;
   }
+
+  .coricone{
+    color: #a27fa8;
+  }
+
+  a{
+    cursor: pointer
+  }
+
+  .name {
+    font-size: 18pt;
+    font-family: Roboto;
+    color: #A27FA8;
+  }
+
+  .imagem {
+    min-height: 50px;
+    min-width: 50px;
+    max-height: 65px;
+    max-width: 65px;
+  }
+  
+  .imagempostagem {
+    min-width: 80%;
+  }

@@ -111,4 +111,14 @@ export class PostagemComponent implements OnInit {
     })
   }
 
+
+
+foto(usuario: Usuario) {
+  if(usuario.foto != "") {
+    return true
+  } else {
+    return false
+  }
+}
+
 }
