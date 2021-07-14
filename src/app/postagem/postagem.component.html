@@ -80,6 +80,7 @@
 
                 <!-- <div class="row d-flex justify-content-start align-items-center">
                     <div class="col-md-3 justify-content-start">
+
                         <div class="row d-flex justify-content-center align-items-center">
                             <div class="col-md-2 d-flex justify-content-center">
                                 <img *ngIf="foto(postagem.usuario)" src={{postagem.usuario.foto}} alt="Imagem do User"
@@ -97,6 +98,7 @@
                             <button class="btn btn-outline-primary2 btn-outline-primary2:hover m-3 align-items-end"
                                 [routerLink]="['/postagem-delete', postagem.id]">Apagar</button>
                             </div>
+
                         </div>
                     </div> -->
                     <!-- <div class="col-md-6 justify-content-start">
@@ -124,17 +126,19 @@
                     </div>
                 </div> -->
                 <div>
+
                     <img src={{postagem.midia}} alt="Imagem da postagem" class="img-fluid text-center imagempostagem" width="1200px" height="630px"
+
                         *ngIf="imagem(postagem)">
                 </div>
                 <div>
                     <small class="text-muted mt-2">Tema: {{postagem.tema.descricao}}</small>
                 </div>
             </div>
-            <div class="mt-2">
+           <!-- <div class="mt-2">
                 <img width="15px" height="15px" src="assets/img/like.png" alt="imagem like">Curtir | <img width="15px"
                     height="15px" src="assets/img/share.png" alt="imagem share">Compartilhar
-            </div>
+            </div> -->
             <div class="mt-2">
                 <p class="card-text"><small class="text-muted">{{postagem.dataPostagem | date: 'dd/MM/yyyy'}} às
                         {{postagem.dataPostagem | date: 'HH:mm'}}</small></p>

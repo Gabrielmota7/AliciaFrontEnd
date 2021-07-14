@@ -45,10 +45,13 @@ export class PostagemComponent implements OnInit {
       this.temaService.token = {
         headers: new HttpHeaders().set('Authorization',environment.token)
       }
+      this.authService.token = {
+        headers: new HttpHeaders().set('Authorization',environment.token)
+      }
     }
     
-    this.findAllPostagens()
     this.findAllTemas()
+    this.findAllPostagens()
   }
 
   findAllPostagens(){
@@ -112,13 +115,13 @@ export class PostagemComponent implements OnInit {
   }
 
 
-
-foto(usuario: Usuario) {
-  if(usuario.foto != "") {
-    return true
-  } else {
-    return false
+  foto(usuario: Usuario) {
+    if(usuario.foto != "") {
+      return true
+    } else {
+      return false
+    }
   }
-}
+
 
 }

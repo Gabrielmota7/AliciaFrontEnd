@@ -59,6 +59,15 @@
     border-color: #da3c3c;
   }
 
+
+
+.name {
+  font-size: 18pt;
+  font-family: Roboto;
+  color: #A27FA8;
+}
+
+
   .coricone{
     color: #a27fa8;
   }
@@ -66,6 +75,7 @@
   a{
     cursor: pointer
   }
+
 
   .name {
     font-size: 18pt;
@@ -83,3 +93,4 @@
   .imagempostagem {
     min-width: 80%;
   }
+
