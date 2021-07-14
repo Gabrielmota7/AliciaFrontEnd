@@ -1,3 +1,8 @@
+a {
+    text-decoration: none;
+    color: #A27FA8;
+}
+
 .sticky {
     position: relative;
     position: -webkit-sticky;
@@ -89,6 +94,11 @@ mat-icon {
     margin-top: 10px;
     font-weight: bold;
     font-size: 16pt;
+}
+
+.name:hover {
+    font-size: 16pt;
+    color: #03989e;
 }
 
 .designation {
