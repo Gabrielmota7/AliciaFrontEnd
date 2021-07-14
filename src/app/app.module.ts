@@ -26,6 +26,9 @@ import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delet
 import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
+import { StartupsComponent } from './startups/startups.component';
+import { AlertasComponent } from './alertas/alertas.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 import { OrderModule } from 'ngx-order-pipe';
 
 
@@ -46,7 +49,9 @@ import { OrderModule } from 'ngx-order-pipe';
     PostagemDeleteComponent,
     TemaEditComponent,
     TemaDeleteComponent,
-    UsuarioEditComponent
+    UsuarioEditComponent,
+    StartupsComponent,
+    AlertasComponent
 
 
 
@@ -58,6 +63,7 @@ import { OrderModule } from 'ngx-order-pipe';
     FormsModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    ModalModule.forRoot(),
     OrderModule
   ],
   providers: [{
