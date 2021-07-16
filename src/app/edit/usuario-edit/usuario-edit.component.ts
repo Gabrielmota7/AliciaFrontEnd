@@ -46,7 +46,8 @@ export class UsuarioEditComponent implements OnInit {
     if(this.usuario.senha == '') {
       this.alertas.showAlertDanger("Por favor, não deixe o campo de Senha vazio ao atualizar seus dados!")
     } else {
-
+      this.usuario.postagem = null
+      console.log(this.usuario)
       this.authService.atualizar(this.usuario).subscribe((resp: Usuario) => {
         this.usuario = resp
         this.alertas.showAlertSuccess("Usuária atualizado com sucesso, por favor faça o login novamente!")

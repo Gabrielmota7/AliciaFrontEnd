@@ -13,5 +13,5 @@ export class Usuario {
     public linkFacebook: string;
     public linkInstagram: string;
     public linkLinkedin: string;
-    public postagem: Postagem[];
+    public postagem: Postagem[] | null;
 }
