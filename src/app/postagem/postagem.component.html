@@ -9,16 +9,16 @@
                     <div class="mb-3 m-1">
                         <p class="align-center">Selecione um tema para postagem</p>
                         <select [(ngModel)]="idTema" class="form-select form-control borda-forma"
-                            aria-label="Default select example" (change)="findByIdTema()">
+                            aria-label="Default select example" (change)="findByIdTema()" name="Tema" ngDefaultControl >
                             <option value='' class="text-secondary">Selecione um tema</option>
-                            <option [(ngModel)]='postagem.tema' *ngFor='let tema of listaTemas' value="{{tema.id}}">
+                            <option [(ngModel)]='postagem.tema' *ngFor='let tema of listaTemas' name="PostagemTema" ngDefaultControl value="{{tema.id}}">
                                 {{tema.descricao}}</option>
                         </select>
                     </div>
 
                     <div class="form-floating mb-3 border-0 m-1">
                         <input [(ngModel)]='postagem.texto' type="text" class="form-control borda-forma"
-                            id="floatingInput" placeholder="texto da postagem">
+                            id="floatingInput" placeholder="texto da postagem" name="TextoPostagem" ngDefaultControl>
                         <label for="floatingInput">Com o que iremos inovar hoje ?</label>
                     </div>
                     <div>
@@ -167,7 +167,7 @@
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon3">https://exemplo.com/</span>
                     <input [(ngModel)]='postagem.midia' type="text" class="form-control" id="basic-url"
-                        aria-describedby="basic-addon3">
+                        aria-describedby="basic-addon3" name="Midia" ngDefaultControl>
                 </div>
 
             </div>
