@@ -46,7 +46,7 @@ export class PostagemComponent implements OnInit {
         headers: new HttpHeaders().set('Authorization',environment.token)
       }
     }
-    
+
     this.findAllPostagens()
     this.findAllTemas()
   }
@@ -69,8 +69,8 @@ export class PostagemComponent implements OnInit {
 
     this.usuario.id = this.idUsuario
     this.postagem.usuario = this.usuario
-    
-    
+
+
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem)=>{
       console.log(this.postagem.tema)
       this.postagem = resp
@@ -112,3 +112,24 @@ export class PostagemComponent implements OnInit {
   }
 
 }
+
+/* document.addEventListener('DOMContentLoaded', () => {
+  const darkModeStorage = localStorage.getItem('dark-mode')
+  const html = document.querySelector('html')
+  const inputDarkMode = document.getElementById('input-dark-mode')
+
+  if(darkModeStorage){
+      html.setAttribute("dark", "true")
+  }
+
+  inputDarkMode.addEventListener('change', () => {
+      if(inputDarkMode.checked){
+          html.setAttribute("dark", "true")
+          localStorage.setItem('dark-mode', true)
+      }else{
+          html.removeAttribute("dark")
+          localStorage.removeItem('dark-mode')
+      }
+ })
+}) */
+

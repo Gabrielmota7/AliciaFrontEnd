@@ -58,3 +58,7 @@
     background-color: #fff;
     border-color: #da3c3c;
   }
+
+  html[dark]{
+    background-color: black;
+}

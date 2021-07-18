@@ -41,8 +41,9 @@ export class EntrarComponent implements OnInit {
       environment.foto = this.usuarioLogin.foto;
       environment.tipo = this.usuarioLogin.tipo;
 
-
       
+
+
       /*Para testes:
         console.log(environment.id)
         console.log(environment.token)
