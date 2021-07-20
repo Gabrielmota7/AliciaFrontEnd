@@ -24,6 +24,7 @@ export class UsuarioEditComponent implements OnInit {
 
   ngOnInit() {
     if (environment.token == '') {
+      this.alertas.showAlertInfo("Sessão expirada, por favor faça o login novamente.")
       this.router.navigate(['/entrar'])
     } else {
       this.authService.token = {
