@@ -73,7 +73,7 @@ export class PostagemComponent implements OnInit {
     this.usuario.id = this.idUsuario
     this.postagem.usuario = this.usuario
     
-    
+    console.log(this.postagem)
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem)=>{
       console.log(this.postagem.tema)
       this.postagem = resp
