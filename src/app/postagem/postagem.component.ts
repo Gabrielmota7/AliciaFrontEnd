@@ -26,7 +26,7 @@ export class PostagemComponent implements OnInit {
   usuario: Usuario = new Usuario()
   idUsuario = environment.id
 
-  key = 'data'
+  key = 'dataPostagem'
   reverse = true
 
   constructor(
