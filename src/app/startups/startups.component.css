@@ -1,10 +1,56 @@
 .card-header{
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
+  font-size: 20px;
+  color: white ;
+}
+
+.card-header{
+
+  background-color:#03989E;
+}
+
+
+.btn-botao{
+  color: #03989E;
+  border-radius: 30px;
+  border: 2px solid #03989E ;
+  transition: .5s;
 
 }
 
-.card, .card-header{
+.btn:hover{
+  color: white;
+  background-color: #03989E;
+}
+
+.h1{
+  color: #A27FA8
+}
+
+.ms-5{
+  margin-right: 20px  ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .card, .card-header{
   background-color: transparent !important;
   border: none !important;
   padding: 0 !important;
@@ -37,4 +83,4 @@
 
 
 
-}
+} */

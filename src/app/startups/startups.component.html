@@ -4,8 +4,9 @@
       <div class="row d-flex justify-content-center">
         <div class="col-md-8 mt-4">
           <div class="mb-3 m-1">
-            <h1>Startups</h1>
-            <h4>Veja todas as Startups cadastradas pelas usuárias</h4>
+            <h1 class="h1">Startups</h1>
+            <h4>Veja as Startups cadastradas pelas usuárias</h4>
+            <p>Apoiar é uma forma de reduzir o gap de gênero no mercado</p>
 
 
              <div class="container">
@@ -18,30 +19,31 @@
             </div>
           </div>
         </div>
- -->
 
-        <!-- <div class="card">
-          <h4 class="text-center mt-5">Todas as Startups</h4> -->
-<!--           <div class="container mb-3" *ngFor='let item of listaUsuario'>
+<hr>
+
+          <h4 class="text-center mt-4">Descubra novas Startups</h4>
+          <div class="container mb-2" *ngFor='let item of listaUsuario'>
             <div *ngIf="item.nomeStartUp !== null">
+              <div class="col-md-10 ms-5 mb-3">
               <div class="card">
-
                 <div class="card-header">
                   {{item.nomeStartUp}}
                 </div>
                 <div class="card-body">
                   <p class="card-text">{{item.resumo}}</p>
-                  <a href="#" class="btn btn-primary">Apoiar</a>
+                  <div class="col-md-12 text-end">
+                  <a href="#" class="btn btn-botao">Apoiar</a>
                 </div>
-              </div> -->
+              </div>
 
 
 
 
-              <div *ngFor='let item of listaUsuario'>
+             <!-- <div *ngFor='let item of listaUsuario'>
               <div class="accordion" id="accordionPanelsStayOpenExample">
                 <div class="accordion-item">
-                  <h2 class="accordion-header" id="panelsStayOpen-{{item.id}}">
+                  <h2 class="accordion-header" id="panelsStayOpen-{{}}">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
                       Accordion Item #1
                     </button>
@@ -53,4 +55,4 @@
                   </div>
                 </div>
               </div>
-              </div>
+              </div>-->
