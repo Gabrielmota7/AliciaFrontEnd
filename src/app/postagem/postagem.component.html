@@ -54,8 +54,8 @@
                             <img *ngIf="!foto(postagem.usuario)" src="../../assets/img/defaultprofileicon.png"
                                         alt="Imagem do User" class="img-fluid rounded-circle imagem">
                         </div>
-                        <div class="col-md-8 text-start ps-0">
-                            <span class="m-0 font-weight-bold name ms-4 pe-2">{{postagem.usuario.nome}}</span>
+                        <div class="col-md-8 texto ps-0">
+                            <a [routerLink] = "['/usuario-perfil',postagem.usuario.id]"><span class="m-0 font-weight-bold name ms-4 pe-2">{{postagem.usuario.nome}}</span></a>
                         </div>
                         <div class="col-md-3">
 

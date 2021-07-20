@@ -54,14 +54,14 @@
             <p class="startupTitulo text-center">Outras redes sociais</p>
             <div class="row d-flex justify-content-center">
                 <div class="col-md-12 d-flex justify-content-center">
-                    <div *ngIf="linkedin(usuario)" target="_blank" class="col-md-3 d-flex justify-content-center mx-2">
-                        <a href="{{usuario.linkLinkedin}}"><i class="fab fa-linkedin icone"></i></a>
+                    <div *ngIf="linkedin(usuario)" class="col-md-3 d-flex justify-content-center mx-2">
+                        <a href="{{usuario.linkLinkedin}}" target="_blank"><i class="fab fa-linkedin icone"></i></a>
                     </div>
-                    <div *ngIf="instagram(usuario)" target="_blank" class="col-md-3 d-flex justify-content-center mx-2">
-                        <a href="{{usuario.linkInstagram}}"><i class="fab fa-instagram icone"></i></a>
+                    <div *ngIf="instagram(usuario)" class="col-md-3 d-flex justify-content-center mx-2">
+                        <a href="{{usuario.linkInstagram}}" target="_blank"><i class="fab fa-instagram icone"></i></a>
                     </div>
-                    <div *ngIf="facebook(usuario)" target="_blank" class="col-md-3 d-flex justify-content-center mx-2">
-                        <a href="{{usuario.linkFacebook}}"><i class="fab fa-facebook-square icone"></i></a>
+                    <div *ngIf="facebook(usuario)" class="col-md-3 d-flex justify-content-center mx-2">
+                        <a href="{{usuario.linkFacebook}}" target="_blank"><i class="fab fa-facebook-square icone"></i></a>
                     </div>
                 </div>
             </div>
