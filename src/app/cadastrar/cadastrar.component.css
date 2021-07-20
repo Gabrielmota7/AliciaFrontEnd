@@ -15,9 +15,7 @@
   .bg-img {
   min-height: 100vh;
   background-image: url("../../assets/img/cadastro5.png");
-  max-height: 100vh;
   background-size: cover;
-  position: absolute;
   /* background-color: rgba(162,127,168, 0.25); */
 }
 /*
@@ -38,7 +36,7 @@
 .btn-outline-primary {
   color: #03989e;
   border-color: #03989e;
-  margin-left: 20px;
+  font-size: 16pt;
 }
 .btn-outline-primary:hover {
   color: #fff;
@@ -49,7 +47,7 @@
 .btn-outline-primary2 {
   color: #a27fa8;
   border-color: #a27fa8;
-  margin-right: 20px;
+  font-size: 16pt;
 }
 .btn-outline-primary2:hover {
   color: #fff;
@@ -103,14 +101,18 @@
 }
 
 .form-cadastro {
-  margin: auto;
   width: 45%;
+  margin-top: 20vh;
   padding: 10px;
   border: 1px solid #fff;
-  margin-top: 100px;
-  height: 70vh;
   background-color: #fff;
+  margin-bottom: 10vh;
 }
+
+.campo {
+  min-width: 90%;
+}
+
 
 
 

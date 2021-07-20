@@ -80,7 +80,6 @@ export class PostagemComponent implements OnInit {
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem)=>{
       console.log(this.postagem.tema)
       this.postagem = resp
-      this.alertas.showAlertSuccess('Postagem feita com sucesso!')
       this.postagem = new Postagem()
       this.findAllTemas()
       this.findAllPostagens()
