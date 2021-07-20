@@ -2,6 +2,7 @@ import { HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import { AlertasService } from '../service/alertas.service';
 import { Usuario } from '../model/Usuario';
 import { AuthService } from '../service/auth.service';
 
@@ -15,11 +16,14 @@ export class StartupsComponent implements OnInit {
   listaUsuario: Usuario[]
   constructor(
     private router: Router,
-    public authService: AuthService
+     public authService: AuthService,
+    private alertas: AlertasService
   ) { }
 
-  ngOnInit(){
-    if(environment.token == '') {
+  ngOnInit() {
+
+    if(environment.token ==''){
+      this.alertas.showAlertInfo("Sessão expirada, por favor faça o login novamente.")
       this.router.navigate(['/entrar'])
     } else {
       this.authService.token = {

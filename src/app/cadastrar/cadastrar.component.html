@@ -77,99 +77,84 @@
 </div> -->
 
 
-<div class="col-12 bg-img">
-
-  <div class="form-cadastro border border-4">
-    <div class="row d-flex justify-content-center">
-      <div class="col-md-4 mt-2 mt-5 d-flex justify-content-center">
-        <img src="../../assets/img/alícia.png" alt="Logo Alicia" class="img-fluid">
-      </div>
-    </div>
-
-    <div class="row d-flex justify-content-center">
-      <div class="col-md-12 mt-2 d-flex justify-content-center mt-2">
-        <h6>Cadastre-se</h6>
-      </div>
-    </div>
-
-
-    <form>
-
-      <div class="col-12">
-        <div class="row">
-          <div class="input-group m-2">
-
-            <div class="col-6">
-              <div class="row me-2 mb-3">
-                <label for="nome"> Nome
-                  <input [(ngModel)]='usuario.nome' name="nome" id ="nome" class="form-control" placeholder="Digite seu nome">
-                </label>
-              </div>
-            </div>
-
-            <div class="col-6">
-              <div class="row me-2 mb-3">
-                <label for="login"> E-mail
-                  <input [(ngModel)]='usuario.login' name="login" id ="login" type="email" class="form-control" placeholder="nome@example.com">
-                </label>
-              </div>
-            </div>
-
-            <div class="col-6">
-              <div class="row-me-2 mb-3">
-                <label for="dataNascimento"> Data de Nascimento
-                  <input [(ngModel)]='usuario.dataNascimento' id="dataNascimento" name="dataNascimento" type="text" class="form-control data" placeholder="Insira a data dd-mm-aaaa">
-                </label>
-              </div>
-            </div>
-
-<!--             <div class="col-6">
-              <div class="row me-2">
-                <label for="nomeStartUp"> Start-up
-                  <input [(ngModel)]='usuario.nomeStartUp' id="nomeStartUp" name="nomeStartUp" class="form-control" placeholder="Digite o nome da sua start-up">
-                </label>
-              </div>
-            </div> -->
-
-            <div class="col-6">
-              <div class="row me-2 mb-3">
-                <label for="foto"> Link da foto
-                  <input [(ngModel)]='usuario.foto' type="text" name="foto" id="foto" type="url" class="form-control" placeholder="https://url_da_img.net">
-                </label>
-              </div>
-            </div>
-
-            <div class="col-6">
-              <div class="row me-2 mb-3">
-                <label for="senha"> Senha
-                  <input (input)='confirmSenha($event)' name="senha" id="senha" type="password" class="form-control">
-                </label>
-              </div>
-            </div>
-
-            <div class="col-6">
-              <div class="row me-2 mb-3">
-                <label for="confirmSenha"> Confirmar Senha
-                  <input [(ngModel)]='usuario.senha' name="confirmSenha" id ="confirmSenha" type="password" class="form-control">
-                </label>
-              </div>
-            </div>
-
-
+<div class="container-fluid bg-img">
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-6 form-cadastro border border-4">
+      
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-4 mt-2 mt-5 d-flex justify-content-center">
+            <img src="../../assets/img/alícia.png" alt="Logo Alicia" class="img-fluid">
           </div>
         </div>
-
-        <div class="d-flex justify-content-center mt-4">
-          <button type="submit" class="btn btn-outline-primary btn-outline-primary:hover m-2"
-            routerLink='/entrar'>Cancelar</button>
-          <button type="submit" class="btn btn-outline-primary2 btn-outline-primary2:hover m-2"
-            (click)='cadastrar()'>Cadastrar</button>
+    
+        <div class="row d-flex justify-content-center mt-2 mb-3">
+          <div class="col-md-12 mt-2 d-flex justify-content-center mt-2">
+            <h6>Cadastre-se</h6>
+          </div>
         </div>
-
-      </div>
-
-    </form>
+    
+    
+    
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="col-md-6 d-flex justify-content-center">
+            <label for="nome" class="campo"> Nome
+              <input [(ngModel)]='usuario.nome' name="nome" id="nome" class="form-control" placeholder="Digite seu nome">
+            </label>
+          </div>
+          <div class="col-md-6 d-flex justify-content-center">
+            <label for="login" class="campo"> E-mail
+              <input [(ngModel)]='usuario.login' name="login" id="login" type="email" class="form-control"
+                placeholder="nome@example.com">
+            </label>
+          </div>
+        </div>
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="col-md-6 d-flex justify-content-center">
+            <label for="dataNascimento" class="campo"> Data de Nascimento
+              <input [(ngModel)]='usuario.dataNascimento' id="dataNascimento" name="dataNascimento" type="text"
+                class="form-control" placeholder="dd-mm-aaaa">
+            </label>
+          </div>
+          <div class="col-md-6 d-flex justify-content-center">
+            <label for="foto" class="campo"> Link da foto
+              <input [(ngModel)]='usuario.foto' type="text" name="foto" id="foto" type="url" class="form-control"
+                placeholder="https://url_da_img.net">
+            </label>
+          </div>
+        </div>
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="col-md-6 d-flex justify-content-center">
+            <label for="senha" class="campo"> Senha
+              <input (input)='confirmSenha($event)' name="senha" id="senha" type="password" class="form-control">
+            </label>
+          </div>
+          <div class="col-md-6 d-flex justify-content-center">
+            <label for="confirmSenha" class="campo"> Confirmar Senha
+              <input [(ngModel)]='usuario.senha' name="confirmSenha" id="confirmSenha" type="password" class="form-control">
+            </label>
+          </div>
+        </div>
+        <div class="row d-flex justify-content-center mt-4 mb-4">
+          <div class="col-md-6 d-flex justify-content-center">
+            <button type="submit" class="btn btn-outline-primary btn-outline-primary:hover my-2"
+            routerLink='/entrar'>Cancelar</button>
+          </div>
+          <div class="col-md-6 d-flex justify-content-center">
+            <button type="submit" class="btn btn-outline-primary2 btn-outline-primary2:hover my-2"
+            (click)='cadastrar()'>Cadastrar</button>
+          </div>
+          
+        </div>
+    
+    
+    
+    
+    
+      
+    </div>
   </div>
+
+  
 </div>
 
 <!--
@@ -256,4 +241,3 @@
                 </div>
               </form>
 -->
-

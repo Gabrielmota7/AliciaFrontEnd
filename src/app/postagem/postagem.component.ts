@@ -5,6 +5,7 @@ import { environment } from 'src/environments/environment.prod';
 import { Postagem } from '../model/Postagem';
 import { Tema } from '../model/Tema';
 import { Usuario } from '../model/Usuario';
+import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
 import { PostagemService } from '../service/postagem.service';
 import { TemaService } from '../service/tema.service';
@@ -32,11 +33,13 @@ export class PostagemComponent implements OnInit {
     private router: Router,
     private postagemService: PostagemService,
     private temaService: TemaService,
-    private authService: AuthService
+    private authService: AuthService,
+    private alertas: AlertasService
   ) { }
 
   ngOnInit(){
     if(environment.token == ''){
+      this.alertas.showAlertInfo("Sessão expirada, por favor faça o login novamente.")
       this.router.navigate(['/entrar'])
     } else {
       this.postagemService.token = {
@@ -77,7 +80,6 @@ export class PostagemComponent implements OnInit {
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem)=>{
       console.log(this.postagem.tema)
       this.postagem = resp
-      alert('Parabens equipe Alicia o post foi um sucesso!!!')
       this.postagem = new Postagem()
       this.findAllTemas()
       this.findAllPostagens()
