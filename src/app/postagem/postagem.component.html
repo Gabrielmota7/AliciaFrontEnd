@@ -10,7 +10,6 @@
                         <p class="align-center">Selecione um tema para postagem</p>
                         <select [(ngModel)]="idTema" class="form-select form-control borda-forma"
                             aria-label="Default select example" (change)="findByIdTema()" ngDefaultControl >
-                            <option value='' class="text-secondary">Selecione um tema</option>
                             <option *ngFor='let tema of listaTemas' ngDefaultControl value="{{tema.id}}">
                                 {{tema.descricao}}</option>
                         </select>

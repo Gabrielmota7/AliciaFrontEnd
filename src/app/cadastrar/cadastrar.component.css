@@ -113,13 +113,6 @@
   min-width: 90%;
 }
 
-input:invalid {
-  border-color: red;
-}
-
-input:valid{
-  border-color: #00878b;
-}
 
 
 
