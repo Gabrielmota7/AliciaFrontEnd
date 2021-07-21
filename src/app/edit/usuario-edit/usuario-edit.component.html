@@ -23,12 +23,12 @@
 </div>
 <div class="form-floating mb-1 m-4">
     <input [(ngModel)]='usuario.nomeStartUp' type="text" class="form-control" id="floatingInput"
-        placeholder="Insira o nome de sua Startup">
+        placeholder="Insira o nome de sua Startup" maxlength="100">
     <label for="floatingInput" class="verde">Nome de sua Startup</label>
 </div>
 <div class="form-floating mb-1 m-4">
     <textarea [(ngModel)]='usuario.resumo' class="form-control tam" rows="7" id="floatingInput"
-        placeholder="Insira um breve resumo sobre sua Startup" height="100px"></textarea>
+        placeholder="Insira um breve resumo sobre sua Startup" height="100px" maxlength="500"></textarea>
     <label for="floatingInput" class="verde">Breve resumo sobre sua Startup</label>
 </div>
 <div class="form-floating mb-1 m-4">
