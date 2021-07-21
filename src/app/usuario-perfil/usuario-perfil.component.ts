@@ -2,8 +2,11 @@ import { HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import { Postagem } from '../model/Postagem';
 import { Usuario } from '../model/Usuario';
+import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
+import { PostagemService } from '../service/postagem.service';
 
 @Component({
   selector: 'app-usuario-perfil',
@@ -12,26 +15,39 @@ import { AuthService } from '../service/auth.service';
 })
 export class UsuarioPerfilComponent implements OnInit {
 
+  listaPostagem: Postagem[]
+  key = 'dataPostagem'
+  reverse = true
+
   usuario: Usuario = new Usuario()
   idUsuario: number
+
+  idPostagem: number
 
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private authService: AuthService
+    private authService: AuthService,
+    private alertas: AlertasService,
+    private postagemService: PostagemService
   ) { }
 
   ngOnInit() {
     if (environment.token == '') {
+      this.alertas.showAlertInfo("Sessão expirada, por favor faça o login novamente.")
       this.router.navigate(['/entrar'])
     } else {
       this.authService.token = {
         headers: new HttpHeaders().set('Authorization', environment.token)
       }
+      this.postagemService.token = {
+        headers: new HttpHeaders().set('Authorization',environment.token)
+      }
     }
     window.scroll(0,0)
     this.idUsuario = this.route.snapshot.params['id']
     this.findByIdUser(this.idUsuario)
+    this.findAllPostagens()
   }
 
   findByIdUser(id: number) {
@@ -41,12 +57,27 @@ export class UsuarioPerfilComponent implements OnInit {
     })
   }
 
+  findAllPostagens(){
+    this.postagemService.getAllPostagem().subscribe((resp: Postagem[])=>{
+      this.listaPostagem = resp
+    })
+  }
+
   foto(usuario: Usuario) {
     if(usuario.foto != "") {
       return true
     } else {
       return false
     }
+  }
+
+  imagem(postagem: Postagem){
+    if(postagem.midia != null){
+      return true
+    }else{
+      return false
+    }
+
   }
 
   linkedin(usuario: Usuario) {
@@ -81,10 +112,39 @@ export class UsuarioPerfilComponent implements OnInit {
     }
   }
 
+  visualizarDeletar() {
+    if(this.usuario.id == environment.id || this.administrador()) {
+      return true
+    } else {
+      return false
+    }
+  }
+
+  postagemDoUsuario(usuarioPostagem: Usuario) {
+    if(usuarioPostagem.id == this.usuario.id) {
+      return true
+    } else {
+      return false
+    }
+  }
+
   deletar() {
     this.authService.deleteUsuario(this.idUsuario).subscribe(() => {
-      alert('Usuaria deletada com sucesso')
+      this.alertas.showAlertSuccess('Usuaria deletada com sucesso')
       this.router.navigate(['/usuarios'])
     })
   }
+
+  deletarPostagemModal(id: number) {
+    this.idPostagem = id
+  }
+
+  deletarPostagem() {
+    this.postagemService.deletePostagem(this.idPostagem).subscribe(() => {
+      this.alertas.showAlertSuccess("Postagem deletada com sucesso")
+      this.findAllPostagens()
+    })
+  }
+
+
 }

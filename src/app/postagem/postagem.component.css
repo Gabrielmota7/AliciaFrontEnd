@@ -1,3 +1,7 @@
+a {
+  text-decoration: none;
+}
+
 .form-cadastro {
     margin: auto;
     width: 45%;
@@ -65,7 +69,21 @@
 .name {
   font-size: 18pt;
   font-family: Roboto;
-  color: #A27FA8;
+  color: #af8bb6;
+}
+
+.name:hover {
+  color: #03989e;
+}
+
+.texto {
+  text-align: start;
+}
+
+@media only screen and (max-width: 792px) {
+    .texto {
+        text-align: center;
+    }
 }
 
 
