@@ -1,201 +1,115 @@
-<div>
-
-</div>
-
-<div class="container-fluid barra-top">
-
-    <div class="row mt-3">
-        <div class="col-md-12">
-
-            <a routerLink="/inicio" class="text-white text-left"></a>
-
-
-            <h1 class="text-light">Sobre o que quer falar?</h1>
-            <h4 class="text-light">Escolha um tema abaixo</h4>
-
-            <div class="row d-flex justify-content-center mt-5 mb-5">
-                <div class="col-md-3">
-                    <div class="form-group">
-                        <input [(ngModel)]='tema.descricao' type="text" class="form-control" id="descricao" placeholder="Digite a descrição do tema">
-                    </div>
-
-
-                </div>
-            </div>
-            <div class="d-flex justify-content-center">
-                <button class="btn barra-down" (click)='cadastrar()'> Cadastrar</button>
-
-            </div>
-
-        </div>
-    </div>
-
-</div>
-
-<div class="container">
-
-    <div class="row mt-5">
-        <div class="col-md-12">
-            <h2 class="text-center">Todos os temas</h2>
-        </div>
-    </div>
-
-    <div class="row mt-3 mb-5 d-flex justify-content-center">
-        <div class="col-md-6">
-
-                    <!--Tabela com os temas-->
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Descrição</th>
-                        <th scope="col" class="text-right">Modificações</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor='let item of listaTemas'>
-                        <th>{{item.id}}</th>
-                        <td>{{item.descricao}}</td>
-                        <td class="d-flex justify-content-end">
-                            <button class="btn btn-info mr-3" [routerLink]="['/tema-edit',item.id]">Editar</button>
-                            <button class="btn btn-primary"[routerLink]="['/tema-delete', item.id]">Apagar</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-
-        </div>
-    </div>
-</div>
-
 <div class="container-fluid">
-
-    <div class="row">
+    <div class="row mt-2">
         <div class="col-md-12">
 
             <a routerLink="/inicio" class="text-white text-left"></a>
 
 
-            <h1>Sobre o que quer falar?</h1>
-            <h4>Cadastre um tema abaixo</h4>
+            <h1 class="text-roxo mb-4">Mergulhe nos temas!</h1>
+            <h4 class="text-roxo">Você vai aprender, respirar, e discutir os principais temas da atualidade e do futuro
+                do trabalho!</h4>
 
-            <div class="row d-flex justify-content-center mt-4 mb-5">
-                <div class="col-md-3">
-                    <div class="form-group">
-                        <input [(ngModel)]='tema.descricao' type="text" class="form-control" id="descricao" placeholder="Digite a descrição do tema">
+            <div *ngIf='administradora()'>
+                <div class="row d-flex justify-content-center mt-2 mb-2">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <input [(ngModel)]='tema.descricao' type="text" class="form-control" id="descricao"
+                                placeholder="Digite a descrição do tema">
+                        </div>
+
+
                     </div>
-
-                    <div class="d-flex justify-content-center">
-                        <button class="btn btn-light" (click)='cadastrar()'> Cadastrar</button>
-
-                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button class="btn barra-down text-light bt-cadastrar" (click)='cadastrar()'> Cadastrar</button>
 
                 </div>
-            </div>
-
-        </div>
-    </div>
-
-</div>
-
-<div class="container">
-
-    <div class="row mt-5">
-        <div class="col-md-12">
-            <h2 class="text-center">Todos os temas</h2>
-        </div>
-    </div>
-
-    <div class="row mt-3 mb-5 d-flex justify-content-center">
-        <div class="col-md-6">
-
-                    <!--Tabela com os temas-->
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Descrição</th>
-                        <th scope="col" class="text-right">Modificações</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor='let item of listaTemas'>
-                        <th>{{item.id}}</th>
-                        <td>{{item.descricao}}</td>
-                        <td class="d-flex justify-content-end">
-                            <button class="btn btn-info mr-3">Editar</button>
-                            <button class="btn btn-primary">Apagar</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-
-        </div>
-    </div>
-</div>
-
-<div class="container-fluid">
-
-    <div class="row">
-        <div class="col-md-12">
-
-            <a routerLink="/inicio" class="text-white text-left"></a>
 
 
-            <h1>Sobre o que quer falar?</h1>
-            <h4>Cadastre um tema abaixo</h4>
 
-            <div class="row d-flex justify-content-center mt-4 mb-5">
-                <div class="col-md-3">
-                    <div class="form-group">
-                        <input [(ngModel)]='tema.descricao' type="text" class="form-control" id="descricao" placeholder="Digite a descrição do tema">
+
+
+
+                <div class="container">
+
+                    <div class="row mt-5">
+                        <div class="col-md-12">
+                            <h2 class="text-center"> </h2>
+                        </div>
                     </div>
 
-                    <div class="d-flex justify-content-center">
-                        <button class="btn btn-light" (click)='cadastrar()'> Cadastrar</button>
+                    <div class="row mt-3 mb-5 d-flex justify-content-center">
+                        <div class="col-md-6">
 
+                            <!--Tabela com os temas-->
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"> </th>
+                                        <th scope="col"> </th>
+                                        <th scope="col" class="text-right"> </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor='let item of listaTemas'>
+                                        <th>{{item.id}}</th>
+                                        <td>{{item.descricao}}</td>
+                                        <td class="d-flex justify-content-end">
+                                            <button type="button" class="btn btn-outline-primary2 btn-outline-primary2:hover borda clicavel"
+                                                [routerLink]="['/tema-edit',item.id]">Editar</button>
+                                            <button type="button" class="btn btn-outline-primary btn-outline-primary:hover borda-verde clicavel"
+                                                [routerLink]="['/tema-delete', item.id]">Apagar</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-
                 </div>
             </div>
-
         </div>
     </div>
 
-</div>
 
-<div class="container">
 
-    <div class="row mt-5">
-        <div class="col-md-12">
-            <h2 class="text-center">Todos os temas</h2>
+
+    <div class="row mb-8 row-cols-2 row-cols-md-2 g-4 mt-5">
+        <div class="col">
+            <div class="card h-100 mr-2 ml-3 ms-1">
+                <img src="../../assets/img/executive.jpg" class="card-img-top" alt="Executiva">
+                <div class="card-body">
+                    <h5 class="card-title text-roxo" [routerLink]="['/postagem']"> Liderança</h5>
+                    <p class="card-text">A capacidade de liderar é uma habilidade importante mesmo que você não esteja em um cargo de liderança, venha conversar aqui sobre essa temática!</p>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <div class="row mt-3 mb-5 d-flex justify-content-center">
-        <div class="col-md-6">
-
-                    <!--Tabela com os temas-->
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Descrição</th>
-                        <th scope="col" class="text-right">Modificações</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor='let item of listaTemas'>
-                        <th>{{item.id}}</th>
-                        <td>{{item.descricao}}</td>
-                        <td class="d-flex justify-content-end">
-                            <button class="btn btn-info mr-3">Editar</button>
-                            <button class="btn btn-primary">Apagar</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-
+        <div class="col">
+            <div class="card h-100 mr-2 ml-3 ms-1">
+                <img src="../../assets/img/mulherTech.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title text-roxo" [routerLink]="['/postagem']">Mulheres e Tecnologias</h5>
+                    <p class="card-text">Muitos estudos mostram os "GAPs" de muheres em diferentes áreas da tecnologia, e aqui queremos debater esse tema tão importante para o gênero feminino.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 mr-2 ml-3 ms-1 mt-3">
+                <img src="../../assets/img/criatividade.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title text-roxo" [routerLink]="['/postagem']">Criatividade</h5>
+                    <p class="card-text">Aquilo que não pode ser automatizado se torna ainda mais valioso! A criatividade é uma das habilidades mais solicitadas pelo mercado de trabalho.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 mr-2 ml-3 ms-1 mt-3">
+                <img src="../../assets/img/futuro1.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title text-roxo" [routerLink]="['/postagem']">Futuro do trabalho</h5>
+                    <p class="card-text">Saímos do mundo VUCA e adentramos no mundo BANI e nesse processo dinânimo e incerto vamos discutir aqui o que será o futuro do trabalho.</p>
+                </div>
+            </div>
         </div>
     </div>
 </div>

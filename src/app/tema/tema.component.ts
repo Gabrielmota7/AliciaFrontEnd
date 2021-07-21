@@ -46,4 +46,12 @@ export class TemaComponent implements OnInit {
     })
   }
 
+  administradora(){
+    if(environment.tipo == 'adm'){
+      return true
+    }else{
+      return false
+    }
+  }
+
 }
