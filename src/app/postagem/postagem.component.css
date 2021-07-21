@@ -65,6 +65,9 @@ a {
     border-color: #da3c3c;
   }
 
+.inovacao {
+  font-size: 11pt
+}
 
 .name {
   font-size: 18pt;
@@ -80,7 +83,7 @@ a {
   text-align: start;
 }
 
-@media only screen and (max-width: 792px) {
+@media only screen and (max-width: 1003px) {
     .texto {
         text-align: center;
     }

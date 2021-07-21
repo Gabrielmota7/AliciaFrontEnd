@@ -16,26 +16,33 @@
           </div>
         </div>
 
-<hr>
+        <hr>
 
-           <h4 class="text-center mt-4 mb-4 h4">Descubra novas Startups</h4>
-          <div class="container mb-2" *ngFor='let item of listaUsuario'>
-            <div *ngIf="item.nomeStartUp !== null">
-              <div class="col-md-10 ms-5 mb-3">
-              <div class="card">
-                <div class="card-header">
-                  {{item.nomeStartUp}}
-                </div>
-                <div class="card-body">
-                  <p class="card-text">{{item.resumo}}</p>
-                  <div class="col-md-12 text-end">
-                  <a href="#" class="btn btn-botao">Apoiar</a>
+        <h4 class="text-center mt-4 mb-4 h4">Descubra novas Startups</h4>
+        <div class="container mb-2" *ngFor='let item of listaUsuario'>
+          <div *ngIf="item.nomeStartUp !== null">
+            <div class="row d-flex justify-content-center">
+              <div class="col-md-10 d-flex justify-content-center mb-3">
+                <div class="card">
+                  <div class="card-header">
+                    {{item.nomeStartUp}}
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text">{{item.resumo}}</p>
+                    <div class="col-md-12 text-end">
+                      <a href="#" class="btn btn-botao">Apoiar</a>
+                    </div>
+                  </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
 
 
 
-<!--
+
+            <!--
               <div *ngFor='let item of listaUsuario'>
               <div class="accordion" id="accordionPanelsStayOpenExample">
                 <div class="accordion-item">
@@ -51,4 +58,3 @@
                   </div>
                 </div>
               </div> -->
-
