@@ -1,7 +1,85 @@
 .barra-top{
-    background-color: #A27FA8;
+    background-color: #b0a5b3;
 }
 
 .barra-down{
     background-color: #03989E;
 }
+
+.cor-verde{
+    border-radius: #03989E;
+}
+
+
+.buttomColor {
+    background-color: #a27fa8;
+}
+
+.buttomApagar {
+    background-color: #03989e;
+}
+
+.btn-outline-primary {
+    color: #03989e;
+    border-color: #03989e;
+    margin-left: 20px;
+}
+.btn-outline-primary:hover {
+    color: #fff;
+    background-color: #03989e;
+    border-color: #03989e;
+}
+
+.btn-outline-primary2 {
+    color: #a27fa8;
+    border-color: #a27fa8;
+    margin-right: 20px;
+}
+.btn-outline-primary2:hover {
+    color: #fff;
+    background-color: #a27fa8;
+    border-color: #a27fa8;
+}
+
+.mb-8 {
+    margin-bottom: 8;
+}
+
+.clicavel {
+    cursor: pointer;
+}
+
+.borda {
+    border: solid;
+    border-color: #A27FA8;
+    border-radius: 60px;
+}
+
+.borda-verde {
+    border: solid;
+    border-color: #03989e;
+    border-radius: 60px;
+}
+
+.bt-cadastrar{
+    border-radius: 60px;
+}
+
+.tamanho {
+    height: 200px;
+}
+
+.ml-10 {
+    margin-left: 15px;
+}
+
+.text-roxo{
+    color: #a27fa8;
+}
+
+.text-verde{
+    color: #03989e;
+}
+
+
+
