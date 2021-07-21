@@ -41,6 +41,15 @@
     border-color: #a27fa8;
 }
 
+@media only screen and (max-width: 792px) {
+    .btn-outline-primary {
+        margin-left: 0px;
+    }
+    .btn-outline-primary2 {
+        margin-right: 1.5px;
+    }
+}
+
 .mb-8 {
     margin-bottom: 8;
 }

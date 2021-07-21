@@ -6,9 +6,14 @@
 }
 
 .bordas {
+    border-top: solid;
     border-right: solid;
     border-left: solid;
+    border-bottom: solid;
     border-color: #A27FA8;
+    border-radius: 25px;
+    margin-top: 1px;
+    margin-bottom: 1px;
     min-height: 100vh;
 }
 
