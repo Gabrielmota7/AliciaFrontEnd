@@ -66,3 +66,34 @@
     }
 
 }
+
+.nome {
+    font-size: 18pt;
+    font-family: Roboto;
+    color: #A27FA8;
+}
+
+.imagem {
+    min-height: 50px;
+    min-width: 50px;
+    max-height: 65px;
+    max-width: 65px;
+    margin-left: 5px;
+}
+
+.imagempostagem {
+    min-width: 80%;
+}
+
+.texto {
+    text-align: start;
+}
+
+@media only screen and (max-width: 792px) {
+    .texto {
+        text-align: center;
+    }
+    .imagem {
+        margin-left: 0px;
+    }
+}

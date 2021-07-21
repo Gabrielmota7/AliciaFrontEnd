@@ -29,7 +29,8 @@
                     </div>
                     <div *ngIf="administrador()" class="row mt-3 justify-content-center">
                         <div class="col-md-3 d-flex justify-content-center">
-                            <button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deletar">DELETAR</button>
+                            <button class="btn btn-outline-danger" data-bs-toggle="modal"
+                                data-bs-target="#deletar">DELETAR</button>
                         </div>
                     </div>
                 </div>
@@ -61,29 +62,104 @@
                         <a href="{{usuario.linkInstagram}}" target="_blank"><i class="fab fa-instagram icone"></i></a>
                     </div>
                     <div *ngIf="facebook(usuario)" class="col-md-3 d-flex justify-content-center mx-2">
-                        <a href="{{usuario.linkFacebook}}" target="_blank"><i class="fab fa-facebook-square icone"></i></a>
+                        <a href="{{usuario.linkFacebook}}" target="_blank"><i
+                                class="fab fa-facebook-square icone"></i></a>
                     </div>
                 </div>
             </div>
-            <hr class="roxo mt-3 mb-3">
+            <hr class="roxo mt-3 mb-5">
         </div>
     </div>
+</div>
+<div class="container">
+    <!-- Postagens do Usuário -->
+    <div class="row d-flex justify-content-center" *ngFor='let postagem of listaPostagem | orderBy : key : reverse'>
+        <div class="col-md-12 card mb-4" *ngIf="postagemDoUsuario(postagem.usuario)">
+            <div class="card-body">
+                <div class="row d-flex justify-content-start align-items-center">
+                    <div class="col-md-10">
+                        <div class="row d-flex justify-content-center align-items-center">
+                            <div class="col-md-1 d-flex justify-content-center px-0">
+                                <img *ngIf="foto(postagem.usuario)" src={{postagem.usuario.foto}} alt="Imagem do User"
+                                    class="img-fluid rounded-circle imagem">
+                                <img *ngIf="!foto(postagem.usuario)" src="../../assets/img/defaultprofileicon.png"
+                                    alt="Imagem do User" class="img-fluid rounded-circle imagem">
+                            </div>
+                            <div class="col-md-8 texto ps-0">
+                                <span class="m-0 font-weight-bold nome ms-4 pe-2">{{postagem.usuario.nome}}</span>
+                            </div>
+                            <div class="col-md-3">
 
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-2 text-center" *ngIf = "visualizarDeletar()">
+                        <button class="btn btn-outline-danger" data-bs-toggle="modal"
+                                data-bs-target="#deletarPostagem" (click) = "deletarPostagemModal(postagem.id)">DELETAR</button>
+                    </div>
+
+                </div>
+                <div>
+                    <p class="card-text mt-4 mb-2">{{postagem.texto}}</p>
+                </div>
+                <div>
+
+                    <img src={{postagem.midia}} alt="Imagem da postagem" class="img-fluid text-center imagempostagem"
+                        width="1200px" height="630px" *ngIf="imagem(postagem)">
+                </div>
+                <div>
+                    <small class="text-muted mt-2">Tema: {{postagem.tema.descricao}}</small>
+                </div>
+            </div>
+            <!-- <div class="mt-2">
+                <img width="15px" height="15px" src="assets/img/like.png" alt="imagem like">Curtir | <img width="15px"
+                    height="15px" src="assets/img/share.png" alt="imagem share">Compartilhar
+            </div> -->
+            <div class="mt-2">
+                <p class="card-text"><small class="text-muted">{{postagem.dataPostagem | date:
+                        'dd/MM/yyyy'}} às
+                        {{postagem.dataPostagem | date: 'HH:mm'}}</small></p>
+            </div>
+        </div>
+
+
+    </div>
 </div>
 
 <!-- Modal -->
-<div class="modal" id = "deletar" tabindex="-1" aria-labelledby="modalAtualizacao" aria-hidden="true">
+<div class="modal" id="deletar" tabindex="-1" aria-labelledby="modalAtualizacao" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header d-flex justify-content-center">
                 <h5 class="modal-title verde">Deleção de Usuária</h5>
             </div>
             <div class="modal-body text-center">
-                <p>Tem certeza de que deseja excluir a usuária? Uma vez confirmada, essa ação não poderá ser revertida!</p>
+                <p>Tem certeza de que deseja excluir a usuária? Uma vez confirmada, essa ação não poderá ser revertida!
+                </p>
             </div>
             <div class="modal-footer d-flex justify-content-center">
                 <button type="button" class="btn btn-outline-danger mx-3" data-bs-dismiss="modal">NÃO</button>
                 <button type="button" class="btn btn-outline-success" (click)="deletar()"
+                    data-bs-dismiss="modal">SIM</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="deletarPostagem" tabindex="-1" aria-labelledby="modalAtualizacao" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header d-flex justify-content-center">
+                <h5 class="modal-title verde">Deleção de Postagem</h5>
+            </div>
+            <div class="modal-body text-center">
+                <p>Tem certeza de que deseja excluir esta postagem? Uma vez confirmada, essa ação não poderá ser revertida!
+                </p>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <button type="button" class="btn btn-outline-danger mx-3" data-bs-dismiss="modal">NÃO</button>
+                <button type="button" class="btn btn-outline-success" (click)="deletarPostagem()"
                     data-bs-dismiss="modal">SIM</button>
             </div>
         </div>
